@@ -43,7 +43,49 @@
 @media (min-width:2400px){ html{ zoom:1.38; } }
 @media (min-width:3000px){ html{ zoom:1.55; } }
 
-:root{color-scheme:only light;}
+:root{color-scheme:light;}
+html[data-theme="dark"]{color-scheme:dark;}
+
+/* ---- dark theme ----
+   Same retune move as the block above: only color tokens are re-pointed, so
+   every Industry component and every color-mix() in this sheet resolves
+   without change. The ground goes warm near-black and the ink warm paper.
+
+   The accent ramp is not simply reversed — each step is set to do its job on
+   the dark ground, matching the role it plays on the light one:
+     100–300  tinted fills and hovers      -> deep, so they sit under the text
+     400      button hover (lightens)      -> lighter than the base
+     600      button pressed (deepens)     -> deeper than the base
+     700      accent text, links, tags     -> light amber, 8.9:1 on the ground
+     800      link hover (lifts further)   -> lighter still
+   The solid primary button keeps a near-black label in both themes. */
+html[data-theme="dark"]{
+  --color-bg:#16130e; --color-surface:#1f1b14; --color-text:#f0ebe1;
+  --color-divider:color-mix(in srgb,#f0ebe1 16%,transparent);
+
+  --color-accent:#e08b23;
+  --color-accent-100:#2a1c0b; --color-accent-200:#3d280d; --color-accent-300:#5c3d12;
+  --color-accent-400:#f0bd7c; --color-accent-500:#e08b23; --color-accent-600:#c07216;
+  --color-accent-700:#eeb367; --color-accent-800:#f5d1a3; --color-accent-900:#faead6;
+
+  --color-accent-2:#e08b23;
+  --color-accent-2-100:#2a1c0b; --color-accent-2-200:#3d280d; --color-accent-2-300:#5c3d12;
+  --color-accent-2-400:#f0bd7c; --color-accent-2-500:#e08b23; --color-accent-2-600:#c07216;
+  --color-accent-2-700:#eeb367; --color-accent-2-800:#f5d1a3; --color-accent-2-900:#faead6;
+
+  --color-neutral-100:#1b1813; --color-neutral-200:#272319; --color-neutral-300:#3a3428;
+  --color-neutral-400:#524a3a; --color-neutral-500:#7a7060; --color-neutral-600:#9d9382;
+  --color-neutral-700:#bdb4a2; --color-neutral-800:#d9d1c2; --color-neutral-900:#efe9dd;
+}
+/* The amber fill is light in both themes, so its label stays near-black. */
+html[data-theme="dark"] .btn-lg,
+html[data-theme="dark"] .btn-lg:hover,
+html[data-theme="dark"] .btn-lg:active,
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .btn-primary:hover,
+html[data-theme="dark"] .btn-primary:active{color:#16130e;}
+/* Photographs are lit for paper; ease them back on the dark ground. */
+html[data-theme="dark"] .bench-panel img{filter:brightness(0.84) contrast(1.04);}
 
 html{scroll-behavior:smooth;}
 body{background:var(--color-bg);color:var(--color-text);margin:0;-webkit-font-smoothing:antialiased;text-wrap:pretty;}
@@ -52,6 +94,17 @@ a:hover{color:var(--color-accent-800);}
 
 /* ---- chrome ---- */
 .site-nav{display:flex;align-items:center;gap:36px;}
+/* The wordmark is a flat SVG with baked ink, so it ships in two cuts. */
+.wm-dark{display:none;}
+html[data-theme="dark"] .wm-light{display:none;}
+html[data-theme="dark"] .wm-dark{display:block;}
+.theme-btn{display:inline-grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid var(--color-divider);background:transparent;color:var(--color-text);cursor:pointer;border-radius:0;transition:background .18s,border-color .18s,color .18s;}
+.theme-btn > svg{grid-area:1/1;}
+.theme-btn:hover{background:color-mix(in srgb,var(--color-accent) 12%,transparent);border-color:var(--color-accent);color:var(--color-accent-700);}
+.theme-btn:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px;}
+.theme-btn .ico-sun{display:none;}
+html[data-theme="dark"] .theme-btn .ico-sun{display:block;}
+html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 .nav-links{display:flex;align-items:center;gap:34px;}
 .nlink{position:relative;color:var(--color-text);text-decoration:none;font-family:var(--font-heading);font-size:16px;font-weight:var(--font-heading-weight);letter-spacing:0.01em;transition:color .18s;}
 .nlink:hover,.nlink[data-active]{color:var(--color-accent-700);}

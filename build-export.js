@@ -16,7 +16,9 @@
        - out/ asset paths rewritten to assets/
        - index.html additionally gets a tiny self-contained carousel script
        - <image-slot> plates baked to <img>, or dropped if no photo yet
-     assets/isentropic-wordmark.svg, assets/isentropic-icon-512.png
+       - theme.js inlined into <head> so the saved theme applies before paint
+     assets/isentropic-wordmark.svg (+ -dark cut), assets/isentropic-icon-512.png
+     assets/og-card.png, assets/og-openjls.png (referenced by og:image)
      robots.txt, sitemap.xml
    DEPLOY: upload the CONTENTS of export/ to the web root.
    ===================================================================== */
@@ -25,6 +27,9 @@ const DS = '_ds/industry-8df8084b-247a-4c13-b5b0-50b41d41eb2f';
 const DOMAIN = 'https://isentropic.com.br';
 const dscss = await readFile(DS + '/styles.css');
 const sitecss = await readFile('site.css');
+/* Inlined rather than shipped as a file: it must run before first paint or the
+   page flashes light before the saved dark theme lands. */
+const themejs = await readFile('theme.js');
 
 const pages = [
   ['Home.dc.html','index.html'],
@@ -40,6 +45,7 @@ const linkMap = {
 const dsLink = '<link rel="stylesheet" href="'+DS+'/styles.css">';
 const dsScript = '<script src="'+DS+'/_ds_bundle.js"><\/script>';
 const siteLink = '<link rel="stylesheet" href="site.css">';
+const themeScript = '<script src="theme.js"><\/script>';
 
 const caroScript = `<script>
 (function(){
@@ -116,6 +122,7 @@ for (const [src,out] of pages){
   helmet = replaceText(helmet, dsLink, '');
   helmet = replaceText(helmet, dsScript, '');
   helmet = replaceText(helmet, siteLink, '');
+  helmet = replaceText(helmet, themeScript, '');
   helmet = replaceText(helmet, '<script src="./image-slot.js"><\/script>', '');
   helmet = replaceText(helmet,'{{ counter }}','01 / 02');
   body = replaceText(body,'{{ counter }}','01 / 02');
@@ -137,12 +144,15 @@ for (const [src,out] of pages){
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
+<meta name="color-scheme" content="light dark">
 <meta name="darkreader-lock">
 <style>
 ${dscss}
 ${sitecss}
 </style>
+<script>
+${themejs.trim()}
+<\/script>
 ${helmet.trim()}
 </head>
 <body>
@@ -155,9 +165,14 @@ ${out==='index.html' ? caroScript : ''}
 }
 
 await saveFile('export/assets/isentropic-wordmark.svg', await readFile('out/isentropic-wordmark.svg'));
+await saveFile('export/assets/isentropic-wordmark-dark.svg', await readFile('out/isentropic-wordmark-dark.svg'));
 await saveFile('export/assets/isentropic-icon-512.png', await readFileBinary('out/isentropic-icon-512.png'));
 await saveFile('export/assets/bench-host.jpg', await readFileBinary('out/bench-host.jpg'));
 await saveFile('export/assets/bench-pynq.jpg', await readFileBinary('out/bench-pynq.jpg'));
+/* The og:image / twitter:image URLs point at these absolutely, so a clean
+   build must ship them or every social preview 404s. */
+await saveFile('export/assets/og-card.png', await readFileBinary('out/og-card.png'));
+await saveFile('export/assets/og-openjls.png', await readFileBinary('out/og-openjls.png'));
 
 await saveFile('export/robots.txt', `User-agent: *
 Allow: /
