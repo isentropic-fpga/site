@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-8df8084b-247a-4c13-b5b0-50b41d41eb2f/styles.css">
+<script src="_ds/industry-8df8084b-247a-4c13-b5b0-50b41d41eb2f/_ds_bundle.js"></script>
+<link rel="icon" href="out/isentropic-icon-512.png">
+<title>Projects — Isentropic</title>
+<meta name="description" content="A record of hardware Isentropic has built, taken from idea to verified netlist. Featuring EncodeOverEthernet, a hardware-in-the-loop demo of the OpenJLS JPEG-LS encoder verified byte-exact across 287 images.">
+<link rel="canonical" href="https://isentropic.com.br/projects.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Isentropic">
+<meta property="og:title" content="Projects — Isentropic">
+<meta property="og:description" content="Hardware taken from idea to verified netlist, including the EncodeOverEthernet OpenJLS demo.">
+<meta property="og:image" content="https://isentropic.com.br/out/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Isentropic — FPGA design & verification and licensable IP cores">
+<meta property="og:url" content="https://isentropic.com.br/projects.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://isentropic.com.br/out/og-card.png">
+<meta name="twitter:image:alt" content="Isentropic — FPGA design & verification and licensable IP cores">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Isentropic","url":"https://isentropic.com.br/","logo":"https://isentropic.com.br/out/isentropic-icon-512.png","email":"contact@isentropic.com.br"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="site.css">
+</helmet>
+
+<div style="min-height:100%;display:flex;flex-direction:column;">
+  <nav class="site-nav" style="padding:14px var(--edge);position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 88%,transparent);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid color-mix(in srgb,var(--color-text) 7%,transparent);">
+    <a href="Home.dc.html" style="margin-right:auto;display:flex;align-items:center;"><img src="out/isentropic-wordmark.svg" alt="Isentropic" style="height:42px;display:block;"></a>
+    <div class="nav-links">
+      <a href="Products.dc.html" class="nlink">Products</a>
+      <a href="Projects.dc.html" class="nlink" data-active="">Projects</a>
+      <a href="Contact.dc.html" class="nlink">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section style="padding:110px var(--edge) 80px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;">
+    <span style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600;">Projects</span>
+    <h1 style="font-size:clamp(38px,5.4vw,60px);line-height:1.06;margin:0;max-width:18ch;">A record of what we have proven in hardware.</h1>
+    <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.55;font-weight:400;margin:0;max-width:44ch;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Work taken from requirement to verified hardware.</p>
+  </section>
+
+  <!-- FEATURED PROJECT -->
+  <section style="padding:0 var(--edge) 90px;">
+    <div style="max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:36px;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600;font-feature-settings:'tnum' 1;">01 · 2026</span>
+        <hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;">
+      </div>
+      <figure class="plate-fig">
+        <div class="blueprint bench-pair" style="position:relative;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="bench-panel" style="height:clamp(260px,32vw,400px);">
+            <div class="duotone"><img src="out/bench-host.jpg" alt="Host workstation rear I/O with the Ethernet link active"></div>
+            <span class="bench-tag">Host · 2.5 GbE NIC</span>
+          </div>
+          <div class="bench-panel" style="height:clamp(260px,32vw,400px);">
+            <div class="duotone"><img src="out/bench-pynq.jpg" alt="PYNQ-Z2 board powered up, Ethernet and USB attached"></div>
+            <span class="bench-tag">PYNQ-Z2 · Zynq-7020</span>
+          </div>
+          <span class="bench-link">1 GbE link</span>
+        </div>
+        <figcaption class="plate-cap">Fig. 01 — Hardware-in-the-loop bench: host to PYNQ-Z2 over Ethernet</figcaption>
+      </figure>
+      <div class="blueprint" style="background:var(--color-surface);">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <header style="display:flex;flex-wrap:wrap;align-items:stretch;border-bottom:1px solid var(--color-divider);">
+          <span style="flex:1;min-width:16ch;padding:16px 26px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;">Encode Over Ethernet</span>
+          <span style="border-left:1px solid var(--color-divider);padding:16px 26px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;color:color-mix(in srgb,var(--color-text) 62%,transparent);white-space:nowrap;">Hardware verification</span>
+          <span style="border-left:1px solid var(--color-divider);padding:16px 26px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;color:color-mix(in srgb,var(--color-text) 62%,transparent);white-space:nowrap;">PYNQ-Z2</span>
+        </header>
+        <div class="g-split">
+          <div class="cell divide-r" style="display:flex;flex-direction:column;gap:22px;">
+            <h2 style="font-size:30px;margin:0;">Encode over Ethernet</h2>
+            <p style="font-size:16.5px;line-height:1.64;margin:0;">The hardware tier of OpenJLS verification, and the one simulation cannot stand in for. An image goes in over Ethernet and its compressed <code style="font-family:inherit;background:var(--color-accent-100);padding:1px 6px;">.jls</code> file comes back — the encoder exercised end to end on a real device rather than in a testbench.</p>
+            <p style="font-size:16.5px;line-height:1.64;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">Verified in hardware across the full corpus of 287 images spanning every supported pixel depth: the FPGA output is byte-exact against the CharLS reference. The 581&nbsp;MB corpus comes back losslessly compressed to 356&nbsp;MB. The whole hardware-in-the-loop sweep is reproducible from a clean clone.</p>
+            <a href="https://github.com/isentropic-fpga/OpenJLS-Demos" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">View the demo on GitHub →</a>
+          </div>
+          <dl style="margin:0;display:flex;flex-direction:column;justify-content:center;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 30px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
+              <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Corpus</dt>
+              <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">287 images</dd>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 30px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
+              <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Depths</dt>
+              <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">8–16 bits</dd>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 30px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
+              <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Result</dt>
+              <dd style="margin:0;font-size:19px;font-weight:600;">Byte-exact</dd>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;padding:18px 30px;">
+              <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Compression (corpus avg.)</dt>
+              <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">1.63 : 1</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE TO COME -->
+  <section style="padding:0 var(--edge) 120px;">
+    <div style="max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
+      <div style="display:flex;align-items:center;gap:16px;">
+        <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 66%,transparent);font-weight:600;font-feature-settings:'tnum' 1;">02 · Next</span>
+        <hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;">
+      </div>
+      <div style="border:1px dashed color-mix(in srgb,var(--color-text) 22%,transparent);padding:44px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;">
+        <h3 style="font-size:20px;margin:0;color:color-mix(in srgb,var(--color-text) 66%,transparent);">More projects in progress</h3>
+        <p style="font-size:15px;line-height:1.6;margin:0;max-width:46ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);">New demonstrations and case studies are added here as they are verified in hardware.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top:auto;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px;padding:40px var(--edge);font-size:13.5px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">
+    <span style="font-weight:600;color:var(--color-text);">Isentropic</span>
+    <a href="mailto:contact@isentropic.com.br" style="color:inherit;text-decoration:none;">contact@isentropic.com.br</a>
+    <span>© 2026</span>
+  </footer>
+</div>
+</x-dc>
+</body>
+</html>
