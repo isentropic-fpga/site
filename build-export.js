@@ -12,7 +12,8 @@
      index.html, products.html, openjls.html, projects.html, contact.html
        - content baked into the markup (no DC runtime / no JS to render)
        - design-system CSS inlined; {{ }} holes resolved
-       - inter-page links rewritten Foo.dc.html -> foo.html
+       - inter-page links rewritten Foo.dc.html -> /foo (extensionless: the
+         host serves the clean path and 307s away from the .html spelling)
        - out/ asset paths rewritten to assets/
        - index.html additionally gets a tiny self-contained carousel script
        - <image-slot> plates baked to <img>, or dropped if no photo yet
@@ -38,9 +39,12 @@ const pages = [
   ['Projects.dc.html','projects.html'],
   ['Contact.dc.html','contact.html'],
 ];
+/* Link targets are the extensionless URLs, not the filenames in `pages` above.
+   Cloudflare Workers Assets treats the clean path as canonical and 307s away
+   from the .html spelling, so linking to .html would bounce every nav click. */
 const linkMap = {
-  'Home.dc.html':'index.html','Products.dc.html':'products.html',
-  'OpenJLS.dc.html':'openjls.html','Projects.dc.html':'projects.html','Contact.dc.html':'contact.html',
+  'Home.dc.html':'/','Products.dc.html':'/products',
+  'OpenJLS.dc.html':'/openjls','Projects.dc.html':'/projects','Contact.dc.html':'/contact',
 };
 const dsLink = '<link rel="stylesheet" href="'+DS+'/styles.css">';
 const dsScript = '<script src="'+DS+'/_ds_bundle.js"><\/script>';
@@ -180,10 +184,14 @@ Allow: /
 Sitemap: ${DOMAIN}/sitemap.xml
 `);
 
-/* Explicit .html paths: these resolve on every static host. Hosts that also
-   serve clean URLs (Netlify, Cloudflare Pages, Vercel) still serve these, so
-   the sitemap and the canonicals cannot disagree with what is actually served. */
-const routes = [['/',1.0],['/products.html',0.8],['/openjls.html',0.8],['/projects.html',0.6],['/contact.html',0.5]];
+/* Extensionless paths, matching what the host actually serves. The .html
+   spelling was used here originally on the theory that it resolves on every
+   static host — but Cloudflare Workers Assets (this site's host) does the
+   opposite: `html_handling` defaults to auto-trailing-slash, which makes the
+   clean path canonical and 307s /products.html -> /products. Listing .html
+   here would point the sitemap and canonicals at redirects rather than pages.
+   Keep these in step with `linkMap` and the canonical/og:url tags in *.dc.html. */
+const routes = [['/',1.0],['/products',0.8],['/openjls',0.8],['/projects',0.6],['/contact',0.5]];
 await saveFile('export/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map(([p,pr])=>`  <url><loc>${DOMAIN}${p}</loc><changefreq>monthly</changefreq><priority>${pr}</priority></url>`).join('\n')}
