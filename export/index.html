@@ -303,18 +303,20 @@ textarea.input { min-height: 90px; resize: vertical; }
 /* Warm retune of the Industry palette.
    Industry's structure, type and components are untouched — only the color
    tokens are re-pointed, which is how the system says to change its look.
-   Steel #5980a6 on cool grey becomes amber on warm paper; the ramps keep
+   Steel #5980a6 on cool grey becomes amber on neutral grey; the ramps keep
    Industry's perceptual lightness steps so every component still resolves.
    Note: amber is a light accent, so the solid primary button carries a
-   near-black label (5.46:1) rather than a white one (3.3:1 — fails AA). */
+   near-black label (5.46:1) rather than a white one (3.3:1 — fails AA).
+   The light ground is #e0e0e0, a step darker than the paper it replaced, so
+   accent-700 (link text) is darkened to #914f08 to hold 4.78:1 against it. */
 :root{
-  --color-bg:#f4f0e9; --color-surface:#ece5da; --color-text:#1c1a16;
+  --color-bg:#e0e0e0; --color-surface:#d5d5d5; --color-text:#1c1a16;
   --color-divider:color-mix(in srgb,#1c1a16 16%,transparent);
 
   --color-accent:#d97706;
   --color-accent-100:#faf1e3; --color-accent-200:#f5dcb9; --color-accent-300:#edc187;
   --color-accent-400:#e5a04a; --color-accent-500:#d97706; --color-accent-600:#bd6706;
-  --color-accent-700:#9a5408; --color-accent-800:#6f3d0c; --color-accent-900:#48290c;
+  --color-accent-700:#914f08; --color-accent-800:#6f3d0c; --color-accent-900:#48290c;
 
   --color-accent-2:#d97706;
   --color-accent-2-100:#faf1e3; --color-accent-2-200:#f5dcb9; --color-accent-2-300:#edc187;
@@ -355,8 +357,8 @@ html[data-theme="dark"]{color-scheme:dark;}
      800      link hover (lifts further)   -> lighter still
    The solid primary button keeps a near-black label in both themes. */
 html[data-theme="dark"]{
-  --color-bg:#16130e; --color-surface:#1f1b14; --color-text:#f0ebe1;
-  --color-divider:color-mix(in srgb,#f0ebe1 16%,transparent);
+  --color-bg:#16130e; --color-surface:#1f1b14; --color-text:#e0e0e0;
+  --color-divider:color-mix(in srgb,#e0e0e0 16%,transparent);
 
   --color-accent:#e08b23;
   --color-accent-100:#2a1c0b; --color-accent-200:#3d280d; --color-accent-300:#5c3d12;
@@ -629,7 +631,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
                 <dl style="margin:0;">
                   <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 26px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
                     <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Throughput</dt>
-                    <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">~240 Mpixel/s</dd>
+                    <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">~280 Mpixel/s</dd>
                   </div>
                   <div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 26px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
                     <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Image size</dt>
