@@ -171,6 +171,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
    legible, so the figure pans horizontally instead of shrinking to nothing. */
 .chart-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
 .chart-scroll > svg{min-width:620px;}
+.plate-fig > .plate-cap{order:-1;}
 .plate-cap{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 66%,transparent);font-weight:600;}
 
 /* ---- layout primitives (in CSS so they can collapse responsively) ---- */

@@ -466,6 +466,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
    legible, so the figure pans horizontally instead of shrinking to nothing. */
 .chart-scroll{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;}
 .chart-scroll > svg{min-width:620px;}
+.plate-fig > .plate-cap{order:-1;}
 .plate-cap{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 66%,transparent);font-weight:600;}
 
 /* ---- layout primitives (in CSS so they can collapse responsively) ---- */
@@ -569,8 +570,8 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <section style="padding:64px var(--edge) 72px;">
     <div class="wrap" style="display:flex;flex-direction:column;gap:22px;">
       <a href="/products" style="font-size:14px;text-decoration:none;color:color-mix(in srgb,var(--color-text) 55%,transparent);">← Products</a>
-      <h1 style="font-size:clamp(44px,6vw,72px);line-height:1;margin:0;">OpenJLS</h1>
-      <p style="font-size:clamp(19px,2.2vw,23px);line-height:1.45;font-weight:400;margin:0;max-width:40ch;color:color-mix(in srgb,var(--color-text) 62%,transparent);">A JPEG-LS encoder IP core for FPGAs — real-time lossless image compression.</p>
+      <h1 style="font-size:clamp(44px,6vw,72px);line-height:1;margin:0;display:flex;"><img class="wm-light" src="assets/openjls-wordmark.svg" alt="OpenJLS" style="height:clamp(76px,10.3vw,124px);margin:-22px 0 -26px -12px;"><img class="wm-dark" src="assets/openjls-wordmark-dark.svg" alt="OpenJLS" style="height:clamp(76px,10.3vw,124px);margin:-22px 0 -26px -12px;"></h1>
+      <p style="font-size:clamp(19px,2.2vw,23px);line-height:1.45;font-weight:400;margin:0;max-width:40ch;color:color-mix(in srgb,var(--color-text) 62%,transparent);">An open-source JPEG-LS encoder IP core for&nbsp;real-time lossless image compression&nbsp;on FPGA.</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;">
         <span class="tag tag-outline">VHDL-93</span>
         <span class="tag tag-outline">ISO/IEC 14495-1</span>
@@ -584,24 +585,24 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <section style="padding:0 var(--edge) 96px;">
     <div class="wrap" style="display:flex;flex-direction:column;gap:22px;">
       <div class="g-2" style="gap:48px;">
-        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec with compression ratios comparable to JPEG&nbsp;2000 lossless, at a fraction of the computational cost and with no external memory required. It reaches roughly 280&nbsp;MHz on a Xilinx UltraScale+ ZU7EG, an MPSoC common in space applications, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
-        <p style="font-size:17px;line-height:1.65;margin:0;color:color-mix(in srgb,var(--color-text) 74%,transparent);">It handles single-component (grayscale) data, so a multi-band sensor uses one compressor per band — resource usage is low enough to run every band in parallel. The core is vendor-agnostic, targeting any FPGA platform, and builds with Vivado, Quartus, Libero, Lattice or open-source tools.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec with compression ratios comparable to JPEG&nbsp;2000 lossless, at a fraction of the computational cost and with no external memory required. It reaches roughly 280&nbsp;MHz on an UltraScale+ ZU7EG, an MPSoC common in space applications, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0;color:color-mix(in srgb,var(--color-text) 74%,transparent);">It handles single-component (grayscale) data, so a multi-band sensor uses one compressor per band — resource usage is low enough to run every band in parallel. The core is vendor-agnostic, targeting any FPGA platform.</p>
       </div>
       <div class="g-2" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);margin-top:14px;">
         <a href="https://github.com/isentropic-fpga/OpenJLS/blob/main/Docs/datasheet/openjls_datasheet.pdf" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Datasheet</span>
           <span style="font-size:16px;font-weight:600;">Full specification — PDF →</span>
-          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Signal timing, reset sequence, latency figures and a worked instantiation example.</span>
+          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Operation,&nbsp;exact characterization values,&nbsp;latency figures and integration.</span>
         </a>
         <a href="https://isentropic-fpga.github.io/OpenJLS/" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Verification</span>
           <span style="font-size:16px;font-weight:600;">Live report →</span>
-          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Published OSVVM and coverage reports, plus post-synthesis logs, per release.</span>
+          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Published OSVVM, coverage, post-synthesis and HIL reports.</span>
         </a>
         <a href="https://github.com/isentropic-fpga/OpenJLS" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Source</span>
           <span style="font-size:16px;font-weight:600;">RTL on GitHub →</span>
-          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">The core, the testbenches and the verification flow — all public.</span>
+          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">The core, exact characterization values and the verification flow.</span>
         </a>
         <a href="https://github.com/isentropic-fpga/OpenJLS-Demos" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Demos</span>
@@ -634,45 +635,10 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
     </div>
   </section>
 
-  <!-- ARCHITECTURE -->
-  <section style="padding:96px var(--edge);">
-    <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">02 · Architecture</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
-      <p style="font-size:17px;line-height:1.65;margin:0;max-width:62ch;">OpenJLS follows the JPEG-LS encoding pipeline, implemented as a fully pipelined, vendor-agnostic VHDL core.</p>
-      <div class="g-5" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">01</span>
-          <h3 style="font-size:16px;margin:0;">Gradient computation</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Local gradients from causal pixel neighbors.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">02</span>
-          <h3 style="font-size:16px;margin:0;">Context modeling</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">365 contexts with adaptive bias correction.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">03</span>
-          <h3 style="font-size:16px;margin:0;">Prediction</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">MED predictor with context-based bias cancellation.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">04</span>
-          <h3 style="font-size:16px;margin:0;">Encoding</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Adaptive Golomb-Rice, with run-length for uniform regions.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">05</span>
-          <h3 style="font-size:16px;margin:0;">Bitstream packing</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">ISO/IEC 14495-1 compliant JPEG-LS output.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- RESOURCES & PERFORMANCE -->
   <section style="padding:96px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:44px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">03 · Resources &amp; performance</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">02 · Resources &amp; performance</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <p style="font-size:17px;line-height:1.65;margin:0;max-width:74ch;">A single generic sets both cost and speed: <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">MAX_IMAGE_WIDTH</span> sizes the on-chip line buffer. Logic stays flat as it grows — only Block RAM follows — and the best implementation strategy holds frequency in a narrow band across the whole range.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:26px 40px;">
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
@@ -689,9 +655,73 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Device</span>
-          <span style="font-size:17px;font-weight:600;font-feature-settings:'tnum' 1;">Zynq UltraScale+ ZU7EG</span>
+          <span style="font-size:17px;font-weight:600;font-feature-settings:'tnum' 1;">UltraScale+ ZU7EG</span>
         </div>
       </div>
+      <figure class="plate-fig">
+        <div class="blueprint" style="padding:26px 20px 14px;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="chart-scroll">
+            <svg viewBox="0 0 1000 452" role="img" aria-label="Maximum frequency against maximum image width: the best of four implementation strategies holds a band around 282 to 289 megahertz" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
+            <g style="stroke:var(--color-divider);stroke-width:1;">
+              <line x1="90" y1="30" x2="930" y2="30"></line>
+              <line x1="90" y1="117.5" x2="930" y2="117.5"></line>
+              <line x1="90" y1="205" x2="930" y2="205"></line>
+              <line x1="90" y1="292.5" x2="930" y2="292.5"></line>
+            </g>
+            <polygon points="90,105.7 146,98.3 202,76.4 258,104.4 482,80.8 930,107.4 930,164.8 482,177.9 258,148.1 202,147.7 146,253.1 90,133.3" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></polygon>
+            <g style="stroke:color-mix(in srgb,var(--color-text) 38%,transparent);stroke-width:1.25;">
+              <line x1="90" y1="30" x2="90" y2="380"></line>
+              <line x1="930" y1="30" x2="930" y2="380"></line>
+              <line x1="90" y1="380" x2="930" y2="380"></line>
+              <line x1="90" y1="380" x2="90" y2="387"></line>
+              <line x1="146" y1="380" x2="146" y2="387"></line>
+              <line x1="202" y1="380" x2="202" y2="387"></line>
+              <line x1="258" y1="380" x2="258" y2="387"></line>
+              <line x1="482" y1="380" x2="482" y2="387"></line>
+              <line x1="930" y1="380" x2="930" y2="387"></line>
+            </g>
+            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="end">
+              <text x="79" y="385">220</text>
+              <text x="79" y="297.5">240</text>
+              <text x="79" y="210">260</text>
+              <text x="79" y="122.5">280</text>
+              <text x="79" y="35">300</text>
+            </g>
+            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="middle">
+              <text x="90" y="405">4k</text>
+              <text x="146" y="405">8k</text>
+              <text x="202" y="405">12k</text>
+              <text x="258" y="405">16k</text>
+              <text x="482" y="405">32k</text>
+              <text x="930" y="405">64k</text>
+            </g>
+            <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum image width (pixels)</text>
+            <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum frequency (MHz)</text>
+            <polyline points="90,105.7 146,253.1 202,147.7 258,104.4 482,96.1 930,154.7" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
+            <polyline points="90,105.7 146,98.3 202,76.4 258,104.4 482,80.8 930,107.4" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
+            <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;">
+              <circle cx="90" cy="105.7" r="4"></circle><circle cx="146" cy="253.1" r="4"></circle><circle cx="202" cy="147.7" r="4"></circle><circle cx="258" cy="104.4" r="4"></circle><circle cx="482" cy="96.1" r="4"></circle><circle cx="930" cy="154.7" r="4"></circle>
+            </g>
+            <g style="fill:var(--color-accent-700);">
+              <circle cx="90" cy="105.7" r="5"></circle><circle cx="146" cy="98.3" r="5"></circle><circle cx="202" cy="76.4" r="5"></circle><circle cx="258" cy="104.4" r="5"></circle><circle cx="482" cy="80.8" r="5"></circle><circle cx="930" cy="107.4" r="5"></circle>
+            </g>
+            <g style="font-size:15px;">
+              <line x1="560" y1="286" x2="598" y2="286" style="stroke:var(--color-accent-700);stroke-width:2.5;"></line>
+              <circle cx="579" cy="286" r="5" style="fill:var(--color-accent-700);"></circle>
+              <text x="610" y="291" style="fill:var(--color-text);">Best of four strategies</text>
+              <line x1="560" y1="318" x2="598" y2="318" style="stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></line>
+              <circle cx="579" cy="318" r="4" style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;"></circle>
+              <text x="610" y="323" style="fill:var(--color-text);">Default strategy</text>
+              <rect x="560" y="343" width="38" height="14" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></rect>
+              <text x="610" y="355" style="fill:var(--color-text);">Spread across strategies</text>
+            </g>
+          </svg>
+          </div>
+        </div>
+        <figcaption class="plate-cap">Fig. 01 — Maximum frequency vs. maximum image width</figcaption>
+      </figure>
+
       <figure class="plate-fig">
         <div class="blueprint" style="padding:26px 20px 14px;">
           <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
@@ -736,9 +766,9 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
               <text x="482" y="405">32k</text>
               <text x="930" y="405">64k</text>
             </g>
-            <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:13.5px;letter-spacing:0.1em;text-transform:uppercase;">Maximum image width — pixels</text>
-            <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:13.5px;letter-spacing:0.1em;text-transform:uppercase;">LUT / FF</text>
-            <text transform="translate(986 205) rotate(90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:13.5px;letter-spacing:0.1em;text-transform:uppercase;">Block RAM tiles</text>
+            <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum image width (pixels)</text>
+            <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Logic (LUT / FF)</text>
+            <text transform="translate(986 205) rotate(90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Block RAM (tiles)</text>
             <polyline points="90,92.9 146,98.7 202,103.2 258,100.5 482,102.2 930,99.7" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></polyline>
             <polyline points="90,291.9 146,291.1 202,291.1 258,290.8 482,290.2 930,289.4" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
             <polyline points="90,352.7 146,336.3 202,319.8 258,308.9 482,248.8 930,128.4" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
@@ -765,83 +795,19 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
           </svg>
           </div>
         </div>
-        <figcaption class="plate-cap">Fig. 01 — Resource usage vs. maximum image width</figcaption>
+        <figcaption class="plate-cap">Fig. 02 — Resource usage vs. maximum image width</figcaption>
       </figure>
 
-      <figure class="plate-fig">
-        <div class="blueprint" style="padding:26px 20px 14px;">
-          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-          <div class="chart-scroll">
-            <svg viewBox="0 0 1000 452" role="img" aria-label="Maximum frequency against maximum image width: the best of four implementation strategies holds a band around 282 to 289 megahertz" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
-            <g style="stroke:var(--color-divider);stroke-width:1;">
-              <line x1="90" y1="30" x2="930" y2="30"></line>
-              <line x1="90" y1="117.5" x2="930" y2="117.5"></line>
-              <line x1="90" y1="205" x2="930" y2="205"></line>
-              <line x1="90" y1="292.5" x2="930" y2="292.5"></line>
-            </g>
-            <polygon points="90,105.7 146,98.3 202,76.4 258,104.4 482,80.8 930,107.4 930,164.8 482,177.9 258,148.1 202,147.7 146,253.1 90,133.3" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></polygon>
-            <g style="stroke:color-mix(in srgb,var(--color-text) 38%,transparent);stroke-width:1.25;">
-              <line x1="90" y1="30" x2="90" y2="380"></line>
-              <line x1="930" y1="30" x2="930" y2="380"></line>
-              <line x1="90" y1="380" x2="930" y2="380"></line>
-              <line x1="90" y1="380" x2="90" y2="387"></line>
-              <line x1="146" y1="380" x2="146" y2="387"></line>
-              <line x1="202" y1="380" x2="202" y2="387"></line>
-              <line x1="258" y1="380" x2="258" y2="387"></line>
-              <line x1="482" y1="380" x2="482" y2="387"></line>
-              <line x1="930" y1="380" x2="930" y2="387"></line>
-            </g>
-            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="end">
-              <text x="79" y="385">220</text>
-              <text x="79" y="297.5">240</text>
-              <text x="79" y="210">260</text>
-              <text x="79" y="122.5">280</text>
-              <text x="79" y="35">300</text>
-            </g>
-            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="middle">
-              <text x="90" y="405">4k</text>
-              <text x="146" y="405">8k</text>
-              <text x="202" y="405">12k</text>
-              <text x="258" y="405">16k</text>
-              <text x="482" y="405">32k</text>
-              <text x="930" y="405">64k</text>
-            </g>
-            <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:13.5px;letter-spacing:0.1em;text-transform:uppercase;">Maximum image width — pixels</text>
-            <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:13.5px;letter-spacing:0.1em;text-transform:uppercase;">Maximum frequency — MHz</text>
-            <polyline points="90,105.7 146,253.1 202,147.7 258,104.4 482,96.1 930,154.7" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
-            <polyline points="90,105.7 146,98.3 202,76.4 258,104.4 482,80.8 930,107.4" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
-            <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;">
-              <circle cx="90" cy="105.7" r="4"></circle><circle cx="146" cy="253.1" r="4"></circle><circle cx="202" cy="147.7" r="4"></circle><circle cx="258" cy="104.4" r="4"></circle><circle cx="482" cy="96.1" r="4"></circle><circle cx="930" cy="154.7" r="4"></circle>
-            </g>
-            <g style="fill:var(--color-accent-700);">
-              <circle cx="90" cy="105.7" r="5"></circle><circle cx="146" cy="98.3" r="5"></circle><circle cx="202" cy="76.4" r="5"></circle><circle cx="258" cy="104.4" r="5"></circle><circle cx="482" cy="80.8" r="5"></circle><circle cx="930" cy="107.4" r="5"></circle>
-            </g>
-            <g style="font-size:15px;">
-              <line x1="560" y1="286" x2="598" y2="286" style="stroke:var(--color-accent-700);stroke-width:2.5;"></line>
-              <circle cx="579" cy="286" r="5" style="fill:var(--color-accent-700);"></circle>
-              <text x="610" y="291" style="fill:var(--color-text);">Best of four strategies</text>
-              <line x1="560" y1="318" x2="598" y2="318" style="stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></line>
-              <circle cx="579" cy="318" r="4" style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;"></circle>
-              <text x="610" y="323" style="fill:var(--color-text);">Default strategy</text>
-              <rect x="560" y="343" width="38" height="14" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></rect>
-              <text x="610" y="355" style="fill:var(--color-text);">Spread across strategies</text>
-            </g>
-          </svg>
-          </div>
-        </div>
-        <figcaption class="plate-cap">Fig. 02 — Maximum frequency vs. maximum image width</figcaption>
-      </figure>
-
-      <p style="font-size:13.5px;line-height:1.62;margin:0;max-width:80ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Both figures characterized on a Zynq UltraScale+ <span style="font-feature-settings:'tnum' 1;">xczu7eg-fbvb900-1-e</span> (speed grade −1, slowest), Vivado 2025.2, 12-bit grayscale. Frequencies are true fmax — read by over-constraining the clock until the design failed timing. Resource figures use the default strategy; utilization is near-identical across strategies. RTL only, no floorplanning or vendor-specific optimization: representative, not guaranteed.</p>
+      <p style="font-size:13.5px;line-height:1.62;margin:0;max-width:80ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Both figures characterized on an UltraScale+ <span style="font-feature-settings:'tnum' 1;">xczu7eg-fbvb900-1-e</span> (speed grade −1, slowest), Vivado 2025.2, 12-bit grayscale. Frequencies are true fmax — read by over-constraining the clock until the design failed timing. Resource figures use the default strategy; utilization is near-identical across strategies. RTL only, no floorplanning or vendor-specific optimization: representative, not guaranteed.</p>
     </div>
   </section>
 
   <!-- VERIFICATION -->
   <section style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:88px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:38px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">04 · Verification</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">03 · Verification</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <div class="g-2" style="gap:64px;align-items:start;">
-        <p style="font-size:16px;line-height:1.64;margin:0;">Verified at three levels. In simulation, a layered suite — constrained-random self-checking tests, functional coverage, and byte-exact comparison against CharLS, an independent open-source implementation of JPEG-LS — runs at both RTL and post-synthesis gate level. The same corpus is then re-encoded on a real device: the core runs on a PYNQ-Z2 and the returned bitstreams are compared byte-for-byte against the same reference.</p>
+        <p style="font-size:16px;line-height:1.64;margin:0;">Verified at three levels. In simulation, a layered suite — constrained-random self-checking tests, functional coverage, code coverage, and byte-exact comparison against CharLS, an independent open-source implementation of JPEG-LS — runs at both RTL and post-synthesis gate level. The same corpus is then re-encoded on a real device: the core runs on a PYNQ-Z2 and the returned bitstreams are compared byte-for-byte against the same reference.</p>
         <div style="display:flex;flex-direction:column;gap:26px;">
         <div style="display:flex;flex-direction:column;gap:0;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact</span></div>
@@ -850,6 +816,41 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
           <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">In hardware</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact on PYNQ-Z2</span></div>
         </div>
         <a href="https://isentropic-fpga.github.io/OpenJLS/" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">Live verification report →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section style="padding:96px var(--edge);">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">04 · Architecture</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:62ch;">OpenJLS follows the JPEG-LS encoding pipeline, implemented as a fully pipelined, vendor-agnostic VHDL core.</p>
+      <div class="g-5" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">01</span>
+          <h3 style="font-size:16px;margin:0;">Gradient computation</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Local gradients from causal pixel neighbors.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">02</span>
+          <h3 style="font-size:16px;margin:0;">Context modeling</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">365 contexts with adaptive bias correction.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">03</span>
+          <h3 style="font-size:16px;margin:0;">Prediction</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">MED predictor with context-based bias cancellation.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">04</span>
+          <h3 style="font-size:16px;margin:0;">Encoding</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Adaptive Golomb-Rice, with run-length for uniform regions.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">05</span>
+          <h3 style="font-size:16px;margin:0;">Bitstream packing</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">ISO/IEC 14495-1 compliant JPEG-LS output.</p>
         </div>
       </div>
     </div>
