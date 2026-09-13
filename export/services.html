@@ -535,22 +535,22 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 })();
 </script>
 <link rel="icon" href="assets/isentropic-icon-512.png">
-<title>Projects — Isentropic</title>
-<meta name="description" content="A record of hardware Isentropic has built, taken from idea to verified netlist. Featuring EncodeOverEthernet, a hardware-in-the-loop demo of the OpenJLS JPEG-LS encoder verified byte-exact across 287 images.">
-<link rel="canonical" href="https://isentropic.com.br/projects">
+<title>Services — Isentropic</title>
+<meta name="description" content="FPGA design and verification services for imaging and aerospace — RTL architecture, coverage-driven verification, and the projects that prove it, including the EncodeOverEthernet hardware-in-the-loop demo of OpenJLS.">
+<link rel="canonical" href="https://isentropic.com.br/services">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Isentropic">
-<meta property="og:title" content="Projects — Isentropic">
-<meta property="og:description" content="Hardware taken from idea to verified netlist, including the EncodeOverEthernet OpenJLS demo.">
+<meta property="og:title" content="Services — Isentropic">
+<meta property="og:description" content="FPGA design &amp; verification for imaging and aerospace — hardware taken from requirement to verified netlist.">
 <meta property="og:image" content="https://isentropic.com.br/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Isentropic — FPGA design &amp; verification and licensable IP cores">
-<meta property="og:url" content="https://isentropic.com.br/projects">
+<meta property="og:image:alt" content="Isentropic — IP cores &amp; FPGA Design for aerospace and imaging">
+<meta property="og:url" content="https://isentropic.com.br/services">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://isentropic.com.br/assets/og-card.png">
-<meta name="twitter:image:alt" content="Isentropic — FPGA design &amp; verification and licensable IP cores">
+<meta name="twitter:image:alt" content="Isentropic — IP cores &amp; FPGA Design for aerospace and imaging">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Isentropic","url":"https://isentropic.com.br/","logo":"https://isentropic.com.br/assets/isentropic-icon-512.png","sameAs":["https://github.com/isentropic-fpga","https://www.linkedin.com/company/isentropic-fpga/"],"email":"contact@isentropic.com.br"}
 </script>
@@ -563,7 +563,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
     <a href="/" aria-label="Isentropic — home" style="margin-right:auto;display:flex;align-items:center;"><img class="wm-light" src="assets/isentropic-wordmark.svg" alt="" style="height:42px;"><img class="wm-dark" src="assets/isentropic-wordmark-dark.svg" alt="" style="height:42px;"></a>
     <div class="nav-links">
       <a href="/products" class="nlink">Products</a>
-      <a href="/projects" class="nlink" data-active="">Projects</a>
+      <a href="/services" class="nlink" data-active="">Services</a>
       <a href="/contact" class="nlink">Contact</a>
       <button type="button" class="theme-btn" data-theme-toggle="" aria-label="Switch color theme" title="Switch color theme">
         <svg class="ico-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
@@ -575,24 +575,52 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <!-- HEADER -->
   <section style="padding:110px var(--edge) 80px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;">
     
-    <h1 style="font-size:clamp(38px,5.4vw,60px);line-height:1.06;margin:0;max-width:18ch;">Projects we have built</h1>
-    <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.55;font-weight:400;margin:0;max-width:44ch;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Work taken from requirement to verified hardware.</p>
+    <h1 style="font-size:clamp(38px,5.4vw,60px);line-height:1.06;margin:0;max-width:18ch;">FPGA design &amp; verification</h1>
+    <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.55;font-weight:400;margin:0;max-width:44ch;color:color-mix(in srgb,var(--color-text) 64%,transparent);">We take hardware from requirement to bitstream, for imaging and aerospace.</p>
   </section>
 
-  <!-- FEATURED PROJECT -->
-  <section style="padding:0 var(--edge) 90px;">
+  <!-- CAPABILITIES -->
+  <section style="padding:0 var(--edge) 104px;">
+    <div style="max-width:1080px;margin:0 auto;">
+      <div class="g-2" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
+        <div class="cell-m" style="background:var(--color-bg);display:flex;flex-direction:column;gap:12px;">
+          <h2 style="font-size:22px;margin:0;">FPGA design</h2>
+          <p style="font-size:15.5px;line-height:1.62;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">Vendor-agnostic RTL architecture and implementation — pipelines, streaming datapaths, and control planes built for real-time throughput and portability.</p>
+        </div>
+        <div class="cell-m" style="background:var(--color-bg);display:flex;flex-direction:column;gap:12px;">
+          <h2 style="font-size:22px;margin:0;">Verification</h2>
+          <p style="font-size:15.5px;line-height:1.62;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">Constrained-random, coverage-driven verification in OSVVM, with independent golden models and embedded assertions, at RTL and post-synthesis netlist.</p>
+        </div>
+        <div class="cell-m" style="background:var(--color-bg);display:flex;flex-direction:column;gap:12px;">
+          <h2 style="font-size:22px;margin:0;">Imaging</h2>
+          <p style="font-size:15.5px;line-height:1.62;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">On-board compression, sensor interfacing, protocols and pixel pipelines for multi-band and high-resolution imagers.</p>
+        </div>
+        <div class="cell-m" style="background:var(--color-bg);display:flex;flex-direction:column;gap:12px;">
+          <h2 style="font-size:22px;margin:0;">Aerospace</h2>
+          <p style="font-size:15.5px;line-height:1.62;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">Deterministic behavior, resource-lean logic, and verification evidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF: FEATURED PROJECT -->
+  <section style="background:var(--color-surface);border-top:1px solid var(--color-divider);padding:96px var(--edge) 90px;">
     <div style="max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:36px;">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:60ch;">
+        <h2 style="font-size:clamp(26px,3.2vw,36px);margin:0;">What that looks like in hardware</h2>
+        <p style="font-size:17px;line-height:1.6;margin:0;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Projects we have taken from requirement to verified hardware.</p>
+      </div>
       <div style="display:flex;align-items:center;gap:16px;">
         <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600;font-feature-settings:'tnum' 1;">01 · 2026</span>
         <hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;">
       </div>
-      <div class="blueprint" style="background:var(--color-surface);">
+      <div class="blueprint" style="background:var(--color-bg);">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
         
         <div class="g-split">
           <div class="cell divide-r" style="display:flex;flex-direction:column;gap:22px;">
             <h2 style="font-size:30px;margin:0;">Encode over Ethernet</h2>
-            <p style="font-size:16.5px;line-height:1.64;margin:0;">The hardware tier of OpenJLS verification, and the one simulation cannot stand in for. An image goes in over Ethernet and its compressed <code style="font-family:inherit;background:var(--color-accent-100);padding:1px 6px;">.jls</code> file comes back — the encoder exercised end to end on a real device rather than in a testbench.</p>
+            <p style="font-size:16.5px;line-height:1.64;margin:0;">The hardware in the loop tier of OpenJLS verification, and the one simulation cannot stand in for. An image goes in over Ethernet and its compressed <code style="font-family: inherit; background: var(--color-accent-100); padding: 1px 6px;">.jls</code> file comes back — the encoder exercised end to end on a real device rather than in a testbench.</p>
             <p style="font-size:16.5px;line-height:1.64;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">Verified in hardware across the full corpus of 287 images spanning every supported pixel depth: the FPGA output is byte-exact against the CharLS reference. The 581&nbsp;MB corpus comes back losslessly compressed to 356&nbsp;MB. The whole hardware-in-the-loop sweep is reproducible from a clean clone.</p>
             <a href="https://github.com/isentropic-fpga/OpenJLS-Demos" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">View the demo on GitHub →</a>
           </div>
@@ -635,7 +663,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   </section>
 
   <!-- MORE TO COME -->
-  <section style="padding:0 var(--edge) 120px;">
+  <section style="background:var(--color-surface);border-bottom:1px solid var(--color-divider);padding:0 var(--edge) 104px;">
     <div style="max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
       <div style="display:flex;align-items:center;gap:16px;">
         <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 66%,transparent);font-weight:600;font-feature-settings:'tnum' 1;">02 · Next</span>
@@ -648,6 +676,12 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
     </div>
   </section>
 
+  <!-- CTA -->
+  <section style="padding:104px var(--edge) 120px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;">
+    <h2 style="font-size:clamp(26px,3.2vw,36px);margin:0;max-width:22ch;">Have hardware that needs building?</h2>
+    <a href="/contact" class="cta" style="font-size:16px;">Discuss a project →</a>
+  </section>
+
   <footer style="margin-top:auto;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px;padding:40px var(--edge);font-size:13.5px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">
     <span style="font-weight:600;color:var(--color-text);">Isentropic</span>
     <a href="mailto:contact@isentropic.com.br" style="color:inherit;text-decoration:none;">contact@isentropic.com.br</a>
@@ -658,6 +692,5 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
     <span>© 2026</span>
   </footer>
 </div>
-
 </body>
 </html>

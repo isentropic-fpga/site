@@ -9,13 +9,12 @@
    exact logic (readFile/saveFile helpers exist in that build sandbox).
 
    WHAT IT PRODUCES (into export/):
-     index.html, products.html, openjls.html, projects.html, contact.html
+     index.html, products.html, openjls.html, services.html, contact.html
        - content baked into the markup (no DC runtime / no JS to render)
        - design-system CSS inlined; {{ }} holes resolved
        - inter-page links rewritten Foo.dc.html -> /foo (extensionless: the
          host serves the clean path and 307s away from the .html spelling)
        - out/ asset paths rewritten to assets/
-       - index.html additionally gets a tiny self-contained carousel script
        - <image-slot> plates baked to <img>, or dropped if no photo yet
        - theme.js inlined into <head> so the saved theme applies before paint
      assets/isentropic-wordmark.svg (+ -dark cut), assets/openjls-wordmark.svg (+ -dark cut),
@@ -37,7 +36,7 @@ const pages = [
   ['Home.dc.html','index.html'],
   ['Products.dc.html','products.html'],
   ['OpenJLS.dc.html','openjls.html'],
-  ['Projects.dc.html','projects.html'],
+  ['Projects.dc.html','services.html'],
   ['Contact.dc.html','contact.html'],
 ];
 /* Link targets are the extensionless URLs, not the filenames in `pages` above.
@@ -45,40 +44,13 @@ const pages = [
    from the .html spelling, so linking to .html would bounce every nav click. */
 const linkMap = {
   'Home.dc.html':'/','Products.dc.html':'/products',
-  'OpenJLS.dc.html':'/openjls','Projects.dc.html':'/projects','Contact.dc.html':'/contact',
+  'OpenJLS.dc.html':'/openjls','Projects.dc.html':'/services','Contact.dc.html':'/contact',
 };
 const dsLink = '<link rel="stylesheet" href="'+DS+'/styles.css">';
 const dsScript = '<script src="'+DS+'/_ds_bundle.js"><\/script>';
 const siteLink = '<link rel="stylesheet" href="site.css">';
 const themeScript = '<script src="theme.js"><\/script>';
 
-const caroScript = `<script>
-(function(){
-  /* Scoped to explicit data-caro hooks (not tag/class guesses) and driven by a
-     transform on the track, so it cannot be confused by other markup and does
-     not depend on scrollLeft inside an overflow:hidden box. */
-  var track=document.querySelector('[data-caro="track"]');
-  if(!track)return;
-  var n=track.children.length; if(n<2)return;
-  var counter=document.querySelector('[data-caro="counter"]');
-  var dots=document.querySelectorAll('[data-caro="dot"]');
-  var prev=document.querySelector('[data-caro="prev"]');
-  var next=document.querySelector('[data-caro="next"]');
-  var i=0;
-  function upd(){
-    track.style.transform='translateX('+(-i*100)+'%)';
-    for(var x=0;x<dots.length;x++)dots[x].setAttribute('data-on',x===i?'1':'0');
-    if(counter)counter.textContent='0'+(i+1)+' / 0'+n;
-  }
-  function go(x){i=((x%n)+n)%n;upd();}
-  if(prev)prev.addEventListener('click',function(){go(i-1);});
-  if(next)next.addEventListener('click',function(){go(i+1);});
-  for(var x=0;x<dots.length;x++)(function(k){
-    dots[k].addEventListener('click',function(){go(k);});
-  })(x);
-  upd();
-})();
-<\/script>`;
 
 /* Image plates.
    The .dc.html sources carry <image-slot> drop targets — that is the correct
@@ -162,7 +134,6 @@ ${helmet.trim()}
 </head>
 <body>
 ${body.trim()}
-${out==='index.html' ? caroScript : ''}
 </body>
 </html>
 `;
@@ -194,7 +165,7 @@ Sitemap: ${DOMAIN}/sitemap.xml
    clean path canonical and 307s /products.html -> /products. Listing .html
    here would point the sitemap and canonicals at redirects rather than pages.
    Keep these in step with `linkMap` and the canonical/og:url tags in *.dc.html. */
-const routes = [['/',1.0],['/products',0.8],['/openjls',0.8],['/projects',0.6],['/contact',0.5]];
+const routes = [['/',1.0],['/products',0.8],['/openjls',0.8],['/services',0.6],['/contact',0.5]];
 await saveFile('export/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map(([p,pr])=>`  <url><loc>${DOMAIN}${p}</loc><changefreq>monthly</changefreq><priority>${pr}</priority></url>`).join('\n')}

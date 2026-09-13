@@ -18,13 +18,13 @@ Do this in one turn, without stopping to ask questions.
 Work done in this project that has *not* been pushed is the user's to commit — they manage commits and pushes.
 
 ## Last sync
-date: 2026-09-09T22:43:06Z
-commit: 60ed2a72b652
+date: 2026-09-13T19:43:49Z
+commit: (head of `main`; sha not resolved)
 
 ### Updated in this project
-- Incremental pull across four upstream commits: 23 changed files overwritten — all five page sources, `site.css`, `build-export.js`, the regenerated brand/OG assets in `out/` and `export/assets/`, and every `export/` page plus `sitemap.xml`.
-- `SocialCards.dc.html` was removed upstream, so it was deleted locally too.
-- Later, unpushed: pulled `out/openjls-wordmark.svg` (+ dark cut) from isentropic-fpga/brand and applied Vitor's review comments — the OpenJLS wordmark now stands in for the word on the OpenJLS hero, the Products card and the Home carousel header; version bumped to v1.3 on Home; Contact intro paragraph and the Home carousel's second heading line removed. `build-export.js` copies the new assets and `export/` was rebuilt.
+- Incremental pull across two upstream commits: 21 of the 23 changed paths overwritten — `Contact`, `Products`, `Projects` and `OpenJLS` sources, `site.css`, `build-export.js`, all five `export/` pages, and the brand assets in `out/` and `export/assets/` (new `isentropic-icon*.svg` and `openjls-wordmark*.svg`).
+- `Home.dc.html` was initially held back to preserve local edits, then pulled on request (the user wanted upstream's icons) — local Home edits were discarded. All 23 changed paths now match `main`.
+- `github.md` was also modified upstream; kept locally and updated as this sync receipt instead.
 
 ## Screen map
 Local sources mirror the repo one-to-one, so every screen tracks the file of the same name.
@@ -43,6 +43,7 @@ Local sources mirror the repo one-to-one, so every screen tracks the file of the
 - isentropic-fpga/brand — generates the logo/wordmark/banner assets checked into `out/`, including the OpenJLS wordmark cuts.
 
 ## Sync history
+- 2026-09-09T22:43:06Z (commit 60ed2a72b652) — incremental pull across four upstream commits: 23 changed files overwritten; `SocialCards.dc.html` removed upstream and deleted locally. Later, unpushed: OpenJLS wordmark assets from isentropic-fpga/brand applied to the OpenJLS hero, Products card and Home carousel; v1.3 bump; `export/` rebuilt.
 - 2026-07-28T14:09:57Z (commit b25b549ceb80) — incremental pull: one upstream commit touched four files (`Home.dc.html`, `OpenJLS.dc.html`, `export/index.html`, `export/openjls.html`).
 - 2026-07-28T13:52:32Z (commit 6a475cd1e497) — full overwrite-from-upstream pull: all 37 tracked files replaced from `main`, picking up the OpenJLS org rename (`VitorMendesC/…` → `isentropic-fpga/…`, report now at `isentropic-fpga.github.io/OpenJLS/`).
 - 2026-07-28T13:45:00Z — read the site repo; applied the OpenJLS org rename by targeted find/replace (superseded by the full pull above).
