@@ -69,13 +69,13 @@
   <section style="padding:0 var(--edge) 96px;">
     <div class="wrap" style="display:flex;flex-direction:column;gap:22px;">
       <div class="g-2" style="gap:48px;">
-        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec with compression ratios comparable to JPEG&nbsp;2000 lossless, at a fraction of the computational cost and with no external memory required. It reaches roughly 280&nbsp;MHz on an UltraScale+ ZU7EG, an MPSoC common in space applications, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec with compression ratios comparable to JPEG&nbsp;2000 lossless, at a fraction of the computational cost and with no external memory required. It reaches roughly 280&nbsp;MHz at 12-bit pixel depth on an UltraScale+ ZU7EG, an MPSoC common in space applications, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
         <p style="font-size:17px;line-height:1.65;margin:0;color:color-mix(in srgb,var(--color-text) 74%,transparent);">It handles single-component (grayscale) data, so a multi-band sensor uses one compressor per band — resource usage is low enough to run every band in parallel. The core is vendor-agnostic, targeting any FPGA platform.</p>
       </div>
       <div class="g-2" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);margin-top:14px;">
         <a href="https://raw.githubusercontent.com/isentropic-fpga/OpenJLS/main/Docs/datasheet/openjls_datasheet.pdf" download="" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Datasheet</span>
-          <span style="font-size:16px;font-weight:600;">Full specification — PDF →</span>
+          <span style="font-size:16px;font-weight:600;">Full specification →</span>
           <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Operation,&nbsp;exact characterization values,&nbsp;latency figures and integration.</span>
         </a>
         <a href="https://isentropic-fpga.github.io/OpenJLS/" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
@@ -123,19 +123,22 @@
   <section style="padding:96px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:44px;">
       <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">02 · Resources &amp; performance</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
-      <p style="font-size:17px;line-height:1.65;margin:0;max-width:74ch;">A single generic sets both cost and speed: <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">MAX_IMAGE_WIDTH</span> sizes the on-chip line buffer. Logic stays flat as it grows — only Block RAM follows — and the best implementation strategy holds frequency in a narrow band across the whole range.</p>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:74ch;">Two generics set both cost and speed. <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">MAX_IMAGE_WIDTH</span> sizes the on-chip line buffer: logic stays flat as it grows — only Block RAM follows — and the best implementation strategy holds frequency in a narrow band across the whole range. <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">BITNESS</span> widens the datapath: logic and Block RAM grow with pixel depth, and the best-of-strategy frequency eases from ~305 MHz at 8 bits to ~225 MHz at 16.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:26px 40px;">
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Max frequency</span>
           <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~282–289 MHz</span>
+          <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 58%,transparent);">at 12-bit pixel depth</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">LUTs</span>
           <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~6,400</span>
+          <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 58%,transparent);">at 12-bit pixel depth</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Flip-flops</span>
           <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~2,000</span>
+          <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 58%,transparent);">at 12-bit pixel depth</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Device</span>
@@ -282,7 +285,147 @@
         <figcaption class="plate-cap">Fig. 02 — Resource usage vs. maximum image width</figcaption>
       </figure>
 
-      <p style="font-size:13.5px;line-height:1.62;margin:0;max-width:80ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Both figures characterized on an UltraScale+ <span style="font-feature-settings:'tnum' 1;">xczu7eg-fbvb900-1-e</span> (speed grade −1, slowest), Vivado 2025.2, 12-bit grayscale. Frequencies are true fmax — read by over-constraining the clock until the design failed timing. Resource figures use the default strategy; utilization is near-identical across strategies. RTL only, no floorplanning or vendor-specific optimization: representative, not guaranteed.</p>
+      <figure class="plate-fig">
+        <div class="blueprint" style="padding:26px 20px 14px;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="chart-scroll">
+            <svg viewBox="0 0 1000 452" role="img" aria-label="Maximum frequency against pixel bit depth: the best of four implementation strategies falls from about 305 megahertz at 8 bits to about 225 megahertz at 16 bits" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
+            <g style="stroke:var(--color-divider);stroke-width:1;">
+              <line x1="90" y1="30" x2="930" y2="30"></line>
+              <line x1="90" y1="88.3" x2="930" y2="88.3"></line>
+              <line x1="90" y1="146.7" x2="930" y2="146.7"></line>
+              <line x1="90" y1="205" x2="930" y2="205"></line>
+              <line x1="90" y1="263.3" x2="930" y2="263.3"></line>
+              <line x1="90" y1="321.7" x2="930" y2="321.7"></line>
+            </g>
+            <polygon points="90,72.9 300,107.0 510,119.3 720,156.6 930,308.0 930,335.1 720,282.6 510,166.8 300,138.5 90,115.2" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></polygon>
+            <g style="stroke:color-mix(in srgb,var(--color-text) 38%,transparent);stroke-width:1.25;">
+              <line x1="90" y1="30" x2="90" y2="380"></line>
+              <line x1="930" y1="30" x2="930" y2="380"></line>
+              <line x1="90" y1="380" x2="930" y2="380"></line>
+              <line x1="90" y1="380" x2="90" y2="387"></line>
+              <line x1="300" y1="380" x2="300" y2="387"></line>
+              <line x1="510" y1="380" x2="510" y2="387"></line>
+              <line x1="720" y1="380" x2="720" y2="387"></line>
+              <line x1="930" y1="380" x2="930" y2="387"></line>
+            </g>
+            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="end">
+              <text x="79" y="385">200</text>
+              <text x="79" y="326.7">220</text>
+              <text x="79" y="268.3">240</text>
+              <text x="79" y="210">260</text>
+              <text x="79" y="151.7">280</text>
+              <text x="79" y="93.3">300</text>
+              <text x="79" y="35">320</text>
+            </g>
+            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="middle">
+              <text x="90" y="405">8</text>
+              <text x="300" y="405">10</text>
+              <text x="510" y="405">12</text>
+              <text x="720" y="405">14</text>
+              <text x="930" y="405">16</text>
+            </g>
+            <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Pixel bit depth (bits)</text>
+            <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum frequency (MHz)</text>
+            <polyline points="90,72.9 300,138.5 510,166.8 720,211.4 930,335.1" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
+            <polyline points="90,72.9 300,107.0 510,119.3 720,156.6 930,308.0" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
+            <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;">
+              <circle cx="90" cy="72.9" r="4"></circle><circle cx="300" cy="138.5" r="4"></circle><circle cx="510" cy="166.8" r="4"></circle><circle cx="720" cy="211.4" r="4"></circle><circle cx="930" cy="335.1" r="4"></circle>
+            </g>
+            <g style="fill:var(--color-accent-700);">
+              <circle cx="90" cy="72.9" r="5"></circle><circle cx="300" cy="107.0" r="5"></circle><circle cx="510" cy="119.3" r="5"></circle><circle cx="720" cy="156.6" r="5"></circle><circle cx="930" cy="308.0" r="5"></circle>
+            </g>
+            <g style="font-size:15px;">
+              <line x1="112" y1="286" x2="150" y2="286" style="stroke:var(--color-accent-700);stroke-width:2.5;"></line>
+              <circle cx="131" cy="286" r="5" style="fill:var(--color-accent-700);"></circle>
+              <text x="162" y="291" style="fill:var(--color-text);">Best of four strategies</text>
+              <line x1="112" y1="318" x2="150" y2="318" style="stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></line>
+              <circle cx="131" cy="318" r="4" style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;"></circle>
+              <text x="162" y="323" style="fill:var(--color-text);">Default strategy</text>
+              <rect x="112" y="343" width="38" height="14" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></rect>
+              <text x="162" y="355" style="fill:var(--color-text);">Spread across strategies</text>
+            </g>
+          </svg>
+          </div>
+        </div>
+        <figcaption class="plate-cap">Fig. 03 — Maximum frequency vs. pixel bit depth</figcaption>
+      </figure>
+
+      <figure class="plate-fig">
+        <div class="blueprint" style="padding:26px 20px 14px;">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div class="chart-scroll">
+            <svg viewBox="0 0 1000 452" role="img" aria-label="Resource usage against pixel bit depth: LUTs, flip-flops and Block RAM all grow with pixel depth" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
+            <g style="stroke:var(--color-divider);stroke-width:1;">
+              <line x1="90" y1="30" x2="930" y2="30"></line>
+              <line x1="90" y1="117.5" x2="930" y2="117.5"></line>
+              <line x1="90" y1="205" x2="930" y2="205"></line>
+              <line x1="90" y1="292.5" x2="930" y2="292.5"></line>
+            </g>
+            <g style="stroke:color-mix(in srgb,var(--color-text) 38%,transparent);stroke-width:1.25;">
+              <line x1="90" y1="30" x2="90" y2="380"></line>
+              <line x1="930" y1="30" x2="930" y2="380"></line>
+              <line x1="90" y1="380" x2="930" y2="380"></line>
+              <line x1="90" y1="380" x2="90" y2="387"></line>
+              <line x1="300" y1="380" x2="300" y2="387"></line>
+              <line x1="510" y1="380" x2="510" y2="387"></line>
+              <line x1="720" y1="380" x2="720" y2="387"></line>
+              <line x1="930" y1="380" x2="930" y2="387"></line>
+            </g>
+            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="end">
+              <text x="79" y="385">0</text>
+              <text x="79" y="297.5">2k</text>
+              <text x="79" y="210">4k</text>
+              <text x="79" y="122.5">6k</text>
+              <text x="79" y="35">8k</text>
+            </g>
+            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="start">
+              <text x="941" y="385">0</text>
+              <text x="941" y="297.5">3</text>
+              <text x="941" y="210">6</text>
+              <text x="941" y="122.5">9</text>
+              <text x="941" y="35">12</text>
+            </g>
+            <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="middle">
+              <text x="90" y="405">8</text>
+              <text x="300" y="405">10</text>
+              <text x="510" y="405">12</text>
+              <text x="720" y="405">14</text>
+              <text x="930" y="405">16</text>
+            </g>
+            <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Pixel bit depth (bits)</text>
+            <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Logic (LUT / FF)</text>
+            <text transform="translate(986 205) rotate(90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Block RAM (tiles)</text>
+            <polyline points="90,147.3 300,121.5 510,103.2 720,80.5 930,47.5" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></polyline>
+            <polyline points="90,302.5 300,296.8 510,291.1 720,285.8 930,279.9" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
+            <polyline points="90,277.9 300,263.3 510,219.6 720,190.4 930,161.2" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
+            <g style="fill:color-mix(in srgb,var(--color-text) 80%,transparent);">
+              <rect x="86" y="143.3" width="8" height="8"></rect><rect x="296" y="117.5" width="8" height="8"></rect><rect x="506" y="99.2" width="8" height="8"></rect><rect x="716" y="76.5" width="8" height="8"></rect><rect x="926" y="43.5" width="8" height="8"></rect>
+            </g>
+            <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:1.75;">
+              <circle cx="90" cy="302.5" r="4"></circle><circle cx="300" cy="296.8" r="4"></circle><circle cx="510" cy="291.1" r="4"></circle><circle cx="720" cy="285.8" r="4"></circle><circle cx="930" cy="279.9" r="4"></circle>
+            </g>
+            <g style="fill:var(--color-accent-700);">
+              <circle cx="90" cy="277.9" r="5"></circle><circle cx="300" cy="263.3" r="5"></circle><circle cx="510" cy="219.6" r="5"></circle><circle cx="720" cy="190.4" r="5"></circle><circle cx="930" cy="161.2" r="5"></circle>
+            </g>
+            <g style="font-size:15px;">
+              <line x1="112" y1="348" x2="150" y2="348" style="stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></line>
+              <rect x="127" y="344" width="8" height="8" style="fill:color-mix(in srgb,var(--color-text) 80%,transparent);"></rect>
+              <text x="162" y="353" style="fill:var(--color-text);">LUTs</text>
+              <line x1="252" y1="348" x2="290" y2="348" style="stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:2;stroke-dasharray:7 5;"></line>
+              <circle cx="271" cy="348" r="4" style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:1.75;"></circle>
+              <text x="302" y="353" style="fill:var(--color-text);">Flip-flops</text>
+              <line x1="422" y1="348" x2="460" y2="348" style="stroke:var(--color-accent-700);stroke-width:2.5;"></line>
+              <circle cx="441" cy="348" r="5" style="fill:var(--color-accent-700);"></circle>
+              <text x="472" y="353" style="fill:var(--color-text);">Block RAM</text>
+            </g>
+          </svg>
+          </div>
+        </div>
+        <figcaption class="plate-cap">Fig. 04 — Resource usage vs. pixel bit depth</figcaption>
+      </figure>
+
+      <p style="font-size:13.5px;line-height:1.62;margin:0;max-width:80ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Figs. 01–02 sweep image width at 12-bit grayscale; Figs. 03–04 sweep pixel bit depth at a maximum image width of 12,288. All characterized on an UltraScale+ <span style="font-feature-settings:'tnum' 1;">xczu7eg-fbvb900-1-e</span> (speed grade −1, slowest), Vivado 2025.2. Frequencies are true fmax — read by over-constraining the clock until the design failed timing. Resource figures use the default strategy; utilization is near-identical across strategies. RTL only, no floorplanning or vendor-specific optimization: representative, not guaranteed.</p>
     </div>
   </section>
 
@@ -294,10 +437,10 @@
         <p style="font-size:16px;line-height:1.64;margin:0;">Verified at three levels. In simulation, a layered suite — constrained-random self-checking tests, functional coverage, code coverage, and byte-exact comparison against CharLS, an independent open-source implementation of JPEG-LS — runs at both RTL and post-synthesis gate level. The same corpus is then re-encoded on a real device: the core runs on a PYNQ-Z2 and the returned bitstreams are compared byte-for-byte against the same reference.</p>
         <div style="display:flex;flex-direction:column;gap:26px;">
         <div style="display:flex;flex-direction:column;gap:0;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;">2,877,433 affirmations</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact images</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;">7,303,829 affirmations</span></div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Code coverage</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;">99.8% statements</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">In hardware</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact on PYNQ-Z2</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">In hardware</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact images on PYNQ-Z2</span></div>
         </div>
         <a href="https://isentropic-fpga.github.io/OpenJLS/" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">Live verification report →</a>
         </div>
