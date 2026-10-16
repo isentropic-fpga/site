@@ -536,12 +536,12 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 </script>
 <link rel="icon" href="assets/isentropic-icon-512.png">
 <title>OpenJLS — JPEG-LS encoder IP core for FPGAs — Isentropic</title>
-<meta name="description" content="OpenJLS is a vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs: lossless image compression at ~280 Mpixel/s, one pixel per clock, 8–16 bit, verified byte-exact against CharLS. Dual-licensed GPL v3 / commercial.">
+<meta name="description" content="OpenJLS is a vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs: lossless image compression at ~280 Mpixel/s and ~1.6:1, one pixel per clock, 8–16 bit, verified byte-exact against CharLS. Dual-licensed GPL v3 / commercial.">
 <link rel="canonical" href="https://isentropic.com.br/openjls">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Isentropic">
 <meta property="og:title" content="OpenJLS — JPEG-LS encoder IP core for FPGAs">
-<meta property="og:description" content="Vendor-agnostic lossless JPEG-LS encoder for FPGAs — ~280 Mpixel/s, one pixel per clock, verified byte-exact.">
+<meta property="og:description" content="Vendor-agnostic lossless JPEG-LS encoder for FPGAs — ~280 Mpixel/s, ~1.6:1, one pixel per clock, verified byte-exact.">
 <meta property="og:image" content="https://isentropic.com.br/assets/og-openjls.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -552,7 +552,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 <meta name="twitter:image" content="https://isentropic.com.br/assets/og-openjls.png">
 <meta name="twitter:image:alt" content="OpenJLS — vendor-agnostic JPEG-LS encoder IP core for FPGAs">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"OpenJLS","brand":{"@type":"Brand","name":"Isentropic"},"category":"FPGA IP core","description":"A vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs for real-time lossless image compression at one pixel per clock (~280 Mpixel/s), 8–16 bit, verified byte-exact against the CharLS reference.","url":"https://isentropic.com.br/openjls","sameAs":["https://github.com/isentropic-fpga/OpenJLS","https://isentropic-fpga.github.io/OpenJLS/"],"additionalProperty":[{"@type":"PropertyValue","name":"Compression","value":"Lossless JPEG-LS"},{"@type":"PropertyValue","name":"Throughput","value":"~280 Mpixel/s"},{"@type":"PropertyValue","name":"Bit depth","value":"8–16 bits"},{"@type":"PropertyValue","name":"Portability","value":"Vendor-agnostic VHDL"}]}
+{"@context":"https://schema.org","@type":"Product","name":"OpenJLS","brand":{"@type":"Brand","name":"Isentropic"},"category":"FPGA IP core","description":"A vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs for real-time lossless image compression at one pixel per clock (~280 Mpixel/s), 8–16 bit, verified byte-exact against the CharLS reference.","url":"https://isentropic.com.br/openjls","sameAs":["https://github.com/isentropic-fpga/OpenJLS","https://isentropic-fpga.github.io/OpenJLS/"],"additionalProperty":[{"@type":"PropertyValue","name":"Compression","value":"Lossless JPEG-LS"},{"@type":"PropertyValue","name":"Compression ratio","value":"~1.6:1"},{"@type":"PropertyValue","name":"Throughput","value":"~280 Mpixel/s"},{"@type":"PropertyValue","name":"Bit depth","value":"8–16 bits"},{"@type":"PropertyValue","name":"Portability","value":"Vendor-agnostic VHDL"}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -579,7 +579,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
       <h1 style="font-size:clamp(44px,6vw,72px);line-height:1;margin:0;display:flex;"><img class="wm-light" src="assets/openjls-wordmark.svg" alt="OpenJLS" style="height:clamp(76px,10.3vw,124px);margin:-22px 0 -26px -12px;"><img class="wm-dark" src="assets/openjls-wordmark-dark.svg" alt="OpenJLS" style="height:clamp(76px,10.3vw,124px);margin:-22px 0 -26px -12px;"></h1>
       <p style="font-size:clamp(19px,2.2vw,23px);line-height:1.45;font-weight:400;margin:0;max-width:40ch;color:color-mix(in srgb,var(--color-text) 62%,transparent);">An open-source JPEG-LS encoder IP core for&nbsp;real-time lossless image compression&nbsp;on FPGA.</p>
       <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;">
-        <span class="tag tag-outline">VHDL-93</span>
+        <span class="tag tag-outline">VHDL</span>
         <span class="tag tag-outline">ISO/IEC 14495-1</span>
         <span class="tag tag-outline">Vendor-agnostic</span>
         <span class="tag tag-outline">v1.3</span>
@@ -591,7 +591,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <section style="padding:0 var(--edge) 96px;">
     <div class="wrap" style="display:flex;flex-direction:column;gap:22px;">
       <div class="g-2" style="gap:48px;">
-        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec with compression ratios comparable to JPEG&nbsp;2000 lossless, at a fraction of the computational cost and with no external memory required. It reaches roughly 280&nbsp;MHz at 12-bit pixel depth on an UltraScale+ ZU7EG, an MPSoC common in space applications, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec reaching ~1.6&nbsp;:&nbsp;1 on natural photographs, with no external memory required. It reaches roughly 280&nbsp;MHz at 12-bit pixel depth on an UltraScale+ ZU7EG, the MPSoC family used in onboard processors such as the Xiphos Q8, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
         <p style="font-size:17px;line-height:1.65;margin:0;color:color-mix(in srgb,var(--color-text) 74%,transparent);">It handles single-component (grayscale) data, so a multi-band sensor uses one compressor per band — resource usage is low enough to run every band in parallel. The core is vendor-agnostic, targeting any FPGA platform.</p>
       </div>
       <div class="g-2" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);margin-top:14px;">
@@ -608,7 +608,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
         <a href="https://github.com/isentropic-fpga/OpenJLS" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Source</span>
           <span style="font-size:16px;font-weight:600;">RTL on GitHub →</span>
-          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">The core, exact characterization values and the verification flow.</span>
+          <span style="font-size:13.5px;line-height:1.5;color:color-mix(in srgb,var(--color-text) 68%,transparent);">The core, testbenches and verification flow.</span>
         </a>
         <a href="https://github.com/isentropic-fpga/OpenJLS-Demos" target="_blank" rel="noopener" style="background:var(--color-bg);padding:22px;display:flex;flex-direction:column;gap:7px;text-decoration:none;color:inherit;" style-hover="background:var(--color-accent-100);">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Demos</span>
@@ -625,36 +625,74 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
       <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">01 · Specifications</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <table class="spec-tbl" style="max-width:680px;">
         <tbody>
-          <tr><td>Compression</td><td>Lossless JPEG-LS</td></tr>
-          <tr><td>Compression ratio</td><td style="font-feature-settings:'tnum' 1;">~1.5 : 1 expected, Earth imaging</td></tr>
+          <tr><td>Standard</td><td>JPEG-LS (ISO/IEC 14495-1, ITU-T T.87)</td></tr>
+          <tr><td>Compression</td><td>Lossless</td></tr>
+          <tr><td>Compression ratio</td><td style="font-feature-settings:'tnum' 1;">~1.6 : 1<sup>1</sup></td></tr>
+          <tr><td>Components</td><td>Grayscale</td></tr>
           <tr><td>Pixel depth</td><td style="font-feature-settings:'tnum' 1;">8–16 bits</td></tr>
-          <tr><td>Components</td><td>Grayscale, single</td></tr>
-          <tr><td>Image size</td><td style="font-feature-settings:'tnum' 1;">Up to 64k × 64k pixels</td></tr>
-          <tr><td>Memory</td><td>On-chip line buffer</td></tr>
+          <tr><td>Image size</td><td style="font-feature-settings:'tnum' 1;">Up to ~64k × 64k px<sup>2</sup></td></tr>
           <tr><td>Throughput</td><td style="font-feature-settings:'tnum' 1;">1 pixel / clock</td></tr>
+          <tr><td>Latency</td><td style="font-feature-settings:'tnum' 1;">14 cycles</td></tr>
+          <tr><td>f<sub>max</sub></td><td style="font-feature-settings:'tnum' 1;">~280 MHz<sup>3</sup></td></tr>
           <tr><td>Interface</td><td>Ready/valid, or AXI4-Stream + AXI4-Lite</td></tr>
-          <tr><td>Conformance</td><td>Byte-exact vs. CharLS</td></tr>
+          <tr><td>Memory</td><td>On-chip only — one image row, no external RAM</td></tr>
+          <tr><td>Resources</td><td style="font-feature-settings:'tnum' 1;">5.3–7.6k LUT, 1.8–2.3k FF<sup>4</sup></td></tr>
           <tr><td>Portability</td><td>Vendor-agnostic VHDL</td></tr>
         </tbody>
       </table>
-      <p style="font-size:14.5px;line-height:1.6;margin:0;max-width:70ch;color:color-mix(in srgb,var(--color-text) 70%,transparent);">Ratio is data-dependent: the core is byte-exact, so output size follows the entropy of your imagery, not a quality setting. Lossless still-image coding generally lands between 1.5&nbsp;:&nbsp;1 and 2.5&nbsp;:&nbsp;1. Our own measurement — 1.63&nbsp;:&nbsp;1 — is the average over a 287-image mixed test corpus.</p>
+      <p style="font-size:13.5px;line-height:1.62;margin:0;max-width:80ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);"><sup>1</sup> Aggregate over the 240 natural photographs of the test corpus; content-dependent.<br><sup>2</sup> Nominally 65535 × 65535 (64k − 1), the largest value that fits the 2-byte dimension fields.<br><sup>3</sup> 12-bit, Xilinx <span style="font-feature-settings:'tnum' 1;">xczu7eg-1</span>.<br><sup>4</sup> Across 8–16 bit, plus block RAM that scales with image width and pixel depth.</p>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section style="padding:96px var(--edge);">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">02 · Architecture</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:62ch;">OpenJLS follows the JPEG-LS encoding pipeline, implemented as a fully pipelined, vendor-agnostic VHDL core.</p>
+      <div class="g-5" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">01</span>
+          <h3 style="font-size:16px;margin:0;">Gradient computation</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Local gradients from the causal neighbors a, b, c, d.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">02</span>
+          <h3 style="font-size:16px;margin:0;">Context modeling</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Gradient quantization into 365 contexts.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">03</span>
+          <h3 style="font-size:16px;margin:0;">Prediction</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">MED predictor with per-context bias correction.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">04</span>
+          <h3 style="font-size:16px;margin:0;">Encoding</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Adaptive Golomb-Rice, run-length for uniform regions.</p>
+        </div>
+        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
+          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">05</span>
+          <h3 style="font-size:16px;margin:0;">Bitstream packing</h3>
+          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Bit packing, byte stuffing and framing into an ISO/IEC 14495-1 stream.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- RESOURCES & PERFORMANCE -->
-  <section style="padding:96px var(--edge);">
+  <section style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:88px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:44px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">02 · Resources &amp; performance</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
-      <p style="font-size:17px;line-height:1.65;margin:0;max-width:74ch;">Two generics set both cost and speed. <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">MAX_IMAGE_WIDTH</span> sizes the on-chip line buffer: logic stays flat as it grows — only Block RAM follows — and the best implementation strategy holds frequency in a narrow band across the whole range. <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">BITNESS</span> widens the datapath: logic and Block RAM grow with pixel depth, and the best-of-strategy frequency eases from ~305 MHz at 8 bits to ~225 MHz at 16.</p>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">03 · Resources &amp; performance</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <p style="font-size:17px;line-height:1.65;margin:0;max-width:74ch;"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">MAX_IMAGE_WIDTH</span> sizes the line buffer, so only block RAM follows it; <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">BITNESS</span> widens the datapath.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:26px 40px;">
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Max frequency</span>
-          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~282–289 MHz</span>
+          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~280 MHz</span>
           <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 58%,transparent);">at 12-bit pixel depth</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">LUTs</span>
-          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~6,400</span>
+          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~6.3k</span>
           <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 58%,transparent);">at 12-bit pixel depth</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
@@ -952,54 +990,20 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   </section>
 
   <!-- VERIFICATION -->
-  <section style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:88px var(--edge);">
+  <section style="padding:96px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:38px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">03 · Verification</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">04 · Verification</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <div class="g-2" style="gap:64px;align-items:start;">
         <p style="font-size:16px;line-height:1.64;margin:0;">Verified at three levels. In simulation, a layered suite — constrained-random self-checking tests, functional coverage, code coverage, and byte-exact comparison against CharLS, an independent open-source implementation of JPEG-LS — runs at both RTL and post-synthesis gate level. The same corpus is then re-encoded on a real device: the core runs on a PYNQ-Z2 and the returned bitstreams are compared byte-for-byte against the same reference.</p>
         <div style="display:flex;flex-direction:column;gap:26px;">
         <div style="display:flex;flex-direction:column;gap:0;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact images</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;">7,303,829 affirmations</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Code coverage</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;">99.8% statements</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">In hardware</span><span style="font-size:15px;font-weight:600;">287/287 byte-exact images on PYNQ-Z2</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">5555/5555 byte-exact images</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Post-synthesis golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">167/167 byte-exact images</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">HIL golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">5639/5639 byte-exact on PYNQ-Z2</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">106 tests, 7,303,829 affirmations</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Code coverage</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">99.8% statements</span></div>
         </div>
         <a href="https://isentropic-fpga.github.io/OpenJLS/" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">Live verification report →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ARCHITECTURE -->
-  <section style="padding:96px var(--edge);">
-    <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">04 · Architecture</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
-      <p style="font-size:17px;line-height:1.65;margin:0;max-width:62ch;">OpenJLS follows the JPEG-LS encoding pipeline, implemented as a fully pipelined, vendor-agnostic VHDL core.</p>
-      <div class="g-5" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">01</span>
-          <h3 style="font-size:16px;margin:0;">Gradient computation</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Local gradients from causal pixel neighbors.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">02</span>
-          <h3 style="font-size:16px;margin:0;">Context modeling</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">365 contexts with adaptive bias correction.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">03</span>
-          <h3 style="font-size:16px;margin:0;">Prediction</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">MED predictor with context-based bias cancellation.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">04</span>
-          <h3 style="font-size:16px;margin:0;">Encoding</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Adaptive Golomb-Rice, with run-length for uniform regions.</p>
-        </div>
-        <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">05</span>
-          <h3 style="font-size:16px;margin:0;">Bitstream packing</h3>
-          <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">ISO/IEC 14495-1 compliant JPEG-LS output.</p>
         </div>
       </div>
     </div>
@@ -1021,8 +1025,6 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:16px;padding-top:12px;">
         <a href="/contact" class="btn btn-primary" style="text-decoration:none;">Inquire about licensing</a>
-        <a href="https://raw.githubusercontent.com/isentropic-fpga/OpenJLS/main/Docs/datasheet/openjls_datasheet.pdf" download="" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none;">Datasheet (PDF)</a>
-        <a href="https://github.com/isentropic-fpga/OpenJLS" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none;">View on GitHub</a>
       </div>
     </div>
   </section>

@@ -621,25 +621,21 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
           <div class="cell divide-r" style="display:flex;flex-direction:column;gap:22px;">
             <h2 style="font-size:30px;margin:0;">Encode over Ethernet</h2>
             <p style="font-size:16.5px;line-height:1.64;margin:0;">The hardware in the loop tier of OpenJLS verification, and the one simulation cannot stand in for. An image goes in over Ethernet and its compressed <code style="font-family: inherit; background: var(--color-accent-100); padding: 1px 6px;">.jls</code> file comes back — the encoder exercised end to end on a real device rather than in a testbench.</p>
-            <p style="font-size:16.5px;line-height:1.64;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">Verified in hardware across the full corpus of 287 images spanning every supported pixel depth: the FPGA output is byte-exact against the CharLS reference. The 581&nbsp;MB corpus comes back losslessly compressed to 356&nbsp;MB. The whole hardware-in-the-loop sweep is reproducible from a clean clone.</p>
+            <p style="font-size:16.5px;line-height:1.64;margin:0;color:color-mix(in srgb,var(--color-text) 72%,transparent);">Verified in hardware across the full corpus of 5639 images spanning every supported pixel depth: the FPGA output is byte-exact against the CharLS reference. The whole hardware-in-the-loop sweep is reproducible from a clean clone.</p>
             <a href="https://github.com/isentropic-fpga/OpenJLS-Demos" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">View the demo on GitHub →</a>
           </div>
           <dl style="margin:0;display:flex;flex-direction:column;justify-content:center;">
             <div style="display:flex;justify-content:space-between;align-items:center;flex:1;padding:18px 30px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
               <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Corpus</dt>
-              <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">287 images</dd>
+              <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">5639 images</dd>
             </div>
             <div style="display:flex;justify-content:space-between;align-items:center;flex:1;padding:18px 30px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
               <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Depths</dt>
               <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">8–16 bits</dd>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;flex:1;padding:18px 30px;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex:1;padding:18px 30px;">
               <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Result</dt>
               <dd style="margin:0;font-size:19px;font-weight:600;">Byte-exact</dd>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;flex:1;padding:18px 30px;">
-              <dt style="font-size:13px;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Compression (corpus avg.)</dt>
-              <dd style="margin:0;font-size:19px;font-weight:600;font-feature-settings:'tnum' 1;">1.63 : 1</dd>
             </div>
           </dl>
         </div>
