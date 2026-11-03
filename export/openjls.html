@@ -536,12 +536,12 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 </script>
 <link rel="icon" href="assets/isentropic-icon-512.png">
 <title>OpenJLS — JPEG-LS encoder IP core for FPGAs — Isentropic</title>
-<meta name="description" content="OpenJLS is a vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs: lossless image compression at ~280 Mpixel/s and ~1.6:1, one pixel per clock, 8–16 bit, verified byte-exact against CharLS. Dual-licensed GPL v3 / commercial.">
+<meta name="description" content="OpenJLS is a vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs: lossless image compression at ~340 Mpixel/s and ~1.6:1, one pixel per clock, 8–16 bit, verified byte-exact against CharLS. Dual-licensed GPL v3 / commercial.">
 <link rel="canonical" href="https://isentropic.com.br/openjls">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Isentropic">
 <meta property="og:title" content="OpenJLS — JPEG-LS encoder IP core for FPGAs">
-<meta property="og:description" content="Vendor-agnostic lossless JPEG-LS encoder for FPGAs — ~280 Mpixel/s, ~1.6:1, one pixel per clock, verified byte-exact.">
+<meta property="og:description" content="Vendor-agnostic lossless JPEG-LS encoder for FPGAs — ~340 Mpixel/s, ~1.6:1, one pixel per clock, verified byte-exact.">
 <meta property="og:image" content="https://isentropic.com.br/assets/og-openjls.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -552,7 +552,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 <meta name="twitter:image" content="https://isentropic.com.br/assets/og-openjls.png">
 <meta name="twitter:image:alt" content="OpenJLS — vendor-agnostic JPEG-LS encoder IP core for FPGAs">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"OpenJLS","brand":{"@type":"Brand","name":"Isentropic"},"category":"FPGA IP core","description":"A vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs for real-time lossless image compression at one pixel per clock (~280 Mpixel/s), 8–16 bit, verified byte-exact against the CharLS reference.","url":"https://isentropic.com.br/openjls","sameAs":["https://github.com/isentropic-fpga/OpenJLS","https://isentropic-fpga.github.io/OpenJLS/"],"additionalProperty":[{"@type":"PropertyValue","name":"Compression","value":"Lossless JPEG-LS"},{"@type":"PropertyValue","name":"Compression ratio","value":"~1.6:1"},{"@type":"PropertyValue","name":"Throughput","value":"~280 Mpixel/s"},{"@type":"PropertyValue","name":"Bit depth","value":"8–16 bits"},{"@type":"PropertyValue","name":"Portability","value":"Vendor-agnostic VHDL"}]}
+{"@context":"https://schema.org","@type":"Product","name":"OpenJLS","brand":{"@type":"Brand","name":"Isentropic"},"category":"FPGA IP core","description":"A vendor-agnostic JPEG-LS (ISO/IEC 14495-1) encoder IP core for FPGAs for real-time lossless image compression at one pixel per clock (~340 Mpixel/s), 8–16 bit, verified byte-exact against the CharLS reference.","url":"https://isentropic.com.br/openjls","sameAs":["https://github.com/isentropic-fpga/OpenJLS","https://isentropic-fpga.github.io/OpenJLS/"],"additionalProperty":[{"@type":"PropertyValue","name":"Compression","value":"Lossless JPEG-LS"},{"@type":"PropertyValue","name":"Compression ratio","value":"~1.6:1"},{"@type":"PropertyValue","name":"Throughput","value":"~340 Mpixel/s"},{"@type":"PropertyValue","name":"Bit depth","value":"8–16 bits"},{"@type":"PropertyValue","name":"Portability","value":"Vendor-agnostic VHDL"}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -582,7 +582,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
         <span class="tag tag-outline">VHDL</span>
         <span class="tag tag-outline">ISO/IEC 14495-1</span>
         <span class="tag tag-outline">Vendor-agnostic</span>
-        <span class="tag tag-outline">v1.3.2</span>
+        <span class="tag tag-outline">v1.4</span>
       </div>
     </div>
   </section>
@@ -591,7 +591,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <section style="padding:0 var(--edge) 96px;">
     <div class="wrap" style="display:flex;flex-direction:column;gap:22px;">
       <div class="g-2" style="gap:48px;">
-        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec reaching ~1.6&nbsp;:&nbsp;1 on natural photographs, with no external memory required. It reaches roughly 280&nbsp;MHz at 12-bit pixel depth on an UltraScale+ ZU7EG, the MPSoC family used in onboard processors such as the Xiphos Q8, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0;">OpenJLS implements the JPEG-LS standard — a low-complexity lossless image codec reaching ~1.6&nbsp;:&nbsp;1 on natural photographs, with no external memory required. It reaches roughly 340&nbsp;MHz at 12-bit pixel depth on an UltraScale+ ZU7EG, the MPSoC family used in onboard processors such as the Xiphos Q8, and processes one pixel per clock. The whole project is open source — the RTL, the testbenches and the verification flow are all public.</p>
         <p style="font-size:17px;line-height:1.65;margin:0;color:color-mix(in srgb,var(--color-text) 74%,transparent);">It handles single-component (grayscale) data, so a multi-band sensor uses one compressor per band — resource usage is low enough to run every band in parallel. The core is vendor-agnostic, targeting any FPGA platform.</p>
       </div>
       <div class="g-2" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);margin-top:14px;">
@@ -633,10 +633,10 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
           <tr><td>Image size</td><td style="font-feature-settings:'tnum' 1;">Up to ~64k × 64k px<sup>2</sup></td></tr>
           <tr><td>Throughput</td><td style="font-feature-settings:'tnum' 1;">1 pixel / clock</td></tr>
           <tr><td>Latency</td><td style="font-feature-settings:'tnum' 1;">14 cycles</td></tr>
-          <tr><td>f<sub>max</sub></td><td style="font-feature-settings:'tnum' 1;">~280 MHz<sup>3</sup></td></tr>
+          <tr><td>f<sub>max</sub></td><td style="font-feature-settings:'tnum' 1;">~340 MHz<sup>3</sup></td></tr>
           <tr><td>Interface</td><td>Ready/valid, or AXI4-Stream + AXI4-Lite</td></tr>
           <tr><td>Memory</td><td>On-chip only — one image row, no external RAM</td></tr>
-          <tr><td>Resources</td><td style="font-feature-settings:'tnum' 1;">5.3–7.6k LUT, 1.8–2.3k FF<sup>4</sup></td></tr>
+          <tr><td>Resources</td><td style="font-feature-settings:'tnum' 1;">5.4–7.7k LUT, 1.9–2.4k FF<sup>4</sup></td></tr>
           <tr><td>Portability</td><td>Vendor-agnostic VHDL</td></tr>
         </tbody>
       </table>
@@ -687,7 +687,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:26px 40px;">
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Max frequency</span>
-          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~280 MHz</span>
+          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~340 MHz</span>
           <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 58%,transparent);">at 12-bit pixel depth</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
@@ -697,7 +697,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Flip-flops</span>
-          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~2,000</span>
+          <span style="font-size:25px;font-weight:600;font-feature-settings:'tnum' 1;">~2,200</span>
           <span style="font-size:13px;color:color-mix(in srgb,var(--color-text) 58%,transparent);">at 12-bit pixel depth</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
@@ -709,14 +709,14 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
         <div class="blueprint" style="padding:26px 20px 14px;">
           <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
           <div class="chart-scroll">
-            <svg viewBox="0 0 1000 452" role="img" aria-label="Maximum frequency against maximum image width: the best of four implementation strategies holds a band around 282 to 289 megahertz" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
+            <svg viewBox="0 0 1000 452" role="img" aria-label="Maximum frequency against maximum image width: the best of four implementation strategies holds a band around 335 to 359 megahertz" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
             <g style="stroke:var(--color-divider);stroke-width:1;">
-              <line x1="90" y1="30" x2="930" y2="30"></line>
+              <line x1="90" y1="30.0" x2="930" y2="30.0"></line>
               <line x1="90" y1="117.5" x2="930" y2="117.5"></line>
-              <line x1="90" y1="205" x2="930" y2="205"></line>
+              <line x1="90" y1="205.0" x2="930" y2="205.0"></line>
               <line x1="90" y1="292.5" x2="930" y2="292.5"></line>
             </g>
-            <polygon points="90,105.7 146,98.3 202,76.4 258,104.4 482,80.8 930,107.4 930,164.8 482,177.9 258,148.1 202,147.7 146,253.1 90,133.3" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></polygon>
+            <polygon points="90,36.1 146,110.9 202,115.8 258,117.9 482,94.3 930,139.8 930,279.8 482,160.8 258,209.4 202,180.1 146,155.1 90,159.5" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></polygon>
             <g style="stroke:color-mix(in srgb,var(--color-text) 38%,transparent);stroke-width:1.25;">
               <line x1="90" y1="30" x2="90" y2="380"></line>
               <line x1="930" y1="30" x2="930" y2="380"></line>
@@ -729,11 +729,11 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
               <line x1="930" y1="380" x2="930" y2="387"></line>
             </g>
             <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="end">
-              <text x="79" y="385">220</text>
-              <text x="79" y="297.5">240</text>
-              <text x="79" y="210">260</text>
-              <text x="79" y="122.5">280</text>
-              <text x="79" y="35">300</text>
+              <text x="79" y="385.0">280</text>
+              <text x="79" y="297.5">300</text>
+              <text x="79" y="210.0">320</text>
+              <text x="79" y="122.5">340</text>
+              <text x="79" y="35.0">360</text>
             </g>
             <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="middle">
               <text x="90" y="405">4k</text>
@@ -745,13 +745,13 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
             </g>
             <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum image width (pixels)</text>
             <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum frequency (MHz)</text>
-            <polyline points="90,105.7 146,253.1 202,147.7 258,104.4 482,96.1 930,154.7" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
-            <polyline points="90,105.7 146,98.3 202,76.4 258,104.4 482,80.8 930,107.4" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
+            <polyline points="90,156.0 146,117.5 202,115.8 258,197.1 482,114.9 930,244.8" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
+            <polyline points="90,36.1 146,110.9 202,115.8 258,117.9 482,94.3 930,139.8" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
             <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;">
-              <circle cx="90" cy="105.7" r="4"></circle><circle cx="146" cy="253.1" r="4"></circle><circle cx="202" cy="147.7" r="4"></circle><circle cx="258" cy="104.4" r="4"></circle><circle cx="482" cy="96.1" r="4"></circle><circle cx="930" cy="154.7" r="4"></circle>
+              <circle cx="90" cy="156.0" r="4"></circle><circle cx="146" cy="117.5" r="4"></circle><circle cx="202" cy="115.8" r="4"></circle><circle cx="258" cy="197.1" r="4"></circle><circle cx="482" cy="114.9" r="4"></circle><circle cx="930" cy="244.8" r="4"></circle>
             </g>
             <g style="fill:var(--color-accent-700);">
-              <circle cx="90" cy="105.7" r="5"></circle><circle cx="146" cy="98.3" r="5"></circle><circle cx="202" cy="76.4" r="5"></circle><circle cx="258" cy="104.4" r="5"></circle><circle cx="482" cy="80.8" r="5"></circle><circle cx="930" cy="107.4" r="5"></circle>
+              <circle cx="90" cy="36.1" r="5"></circle><circle cx="146" cy="110.9" r="5"></circle><circle cx="202" cy="115.8" r="5"></circle><circle cx="258" cy="117.9" r="5"></circle><circle cx="482" cy="94.3" r="5"></circle><circle cx="930" cy="139.8" r="5"></circle>
             </g>
             <g style="font-size:15px;">
               <line x1="560" y1="286" x2="598" y2="286" style="stroke:var(--color-accent-700);stroke-width:2.5;"></line>
@@ -816,17 +816,17 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
             <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum image width (pixels)</text>
             <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Logic (LUT / FF)</text>
             <text transform="translate(986 205) rotate(90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Block RAM (tiles)</text>
-            <polyline points="90,92.9 146,98.7 202,103.2 258,100.5 482,102.2 930,99.7" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></polyline>
-            <polyline points="90,291.9 146,291.1 202,291.1 258,290.8 482,290.2 930,289.4" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
-            <polyline points="90,352.7 146,336.3 202,319.8 258,308.9 482,248.8 930,128.4" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
+            <polyline points="90,103.4 146,100.9 202,103.5 258,98.4 482,101.5 930,100.4" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></polyline>
+            <polyline points="90,285.0 146,284.8 202,284.7 258,284.0 482,283.0 930,282.6" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
+            <polyline points="90,352.7 146,336.2 202,319.8 258,308.9 482,237.8 930,106.6" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
             <g style="fill:color-mix(in srgb,var(--color-text) 80%,transparent);">
-              <rect x="86" y="88.9" width="8" height="8"></rect><rect x="142" y="94.7" width="8" height="8"></rect><rect x="198" y="99.2" width="8" height="8"></rect><rect x="254" y="96.5" width="8" height="8"></rect><rect x="478" y="98.2" width="8" height="8"></rect><rect x="926" y="95.7" width="8" height="8"></rect>
+              <rect x="86" y="99.4" width="8" height="8"></rect><rect x="142" y="96.9" width="8" height="8"></rect><rect x="198" y="99.5" width="8" height="8"></rect><rect x="254" y="94.4" width="8" height="8"></rect><rect x="478" y="97.5" width="8" height="8"></rect><rect x="926" y="96.4" width="8" height="8"></rect>
             </g>
             <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:1.75;">
-              <circle cx="90" cy="291.9" r="4"></circle><circle cx="146" cy="291.1" r="4"></circle><circle cx="202" cy="291.1" r="4"></circle><circle cx="258" cy="290.8" r="4"></circle><circle cx="482" cy="290.2" r="4"></circle><circle cx="930" cy="289.4" r="4"></circle>
+              <circle cx="90" cy="285.0" r="4"></circle><circle cx="146" cy="284.8" r="4"></circle><circle cx="202" cy="284.7" r="4"></circle><circle cx="258" cy="284.0" r="4"></circle><circle cx="482" cy="283.0" r="4"></circle><circle cx="930" cy="282.6" r="4"></circle>
             </g>
             <g style="fill:var(--color-accent-700);">
-              <circle cx="90" cy="352.7" r="5"></circle><circle cx="146" cy="336.3" r="5"></circle><circle cx="202" cy="319.8" r="5"></circle><circle cx="258" cy="308.9" r="5"></circle><circle cx="482" cy="248.8" r="5"></circle><circle cx="930" cy="128.4" r="5"></circle>
+              <circle cx="90" cy="352.7" r="5"></circle><circle cx="146" cy="336.2" r="5"></circle><circle cx="202" cy="319.8" r="5"></circle><circle cx="258" cy="308.9" r="5"></circle><circle cx="482" cy="237.8" r="5"></circle><circle cx="930" cy="106.6" r="5"></circle>
             </g>
             <g style="font-size:15px;">
               <line x1="112" y1="128" x2="150" y2="128" style="stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></line>
@@ -849,16 +849,15 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
         <div class="blueprint" style="padding:26px 20px 14px;">
           <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
           <div class="chart-scroll">
-            <svg viewBox="0 0 1000 452" role="img" aria-label="Maximum frequency against pixel bit depth: the best of four implementation strategies falls from about 305 megahertz at 8 bits to about 225 megahertz at 16 bits" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
+            <svg viewBox="0 0 1000 452" role="img" aria-label="Maximum frequency against pixel bit depth: the best of four implementation strategies peaks near 365 megahertz at 10 bits and falls to about 323 megahertz at 16 bits" style="display:block;width:100%;height:auto;font-family:var(--font-body);font-feature-settings:'tnum' 1;">
             <g style="stroke:var(--color-divider);stroke-width:1;">
-              <line x1="90" y1="30" x2="930" y2="30"></line>
-              <line x1="90" y1="88.3" x2="930" y2="88.3"></line>
-              <line x1="90" y1="146.7" x2="930" y2="146.7"></line>
-              <line x1="90" y1="205" x2="930" y2="205"></line>
-              <line x1="90" y1="263.3" x2="930" y2="263.3"></line>
-              <line x1="90" y1="321.7" x2="930" y2="321.7"></line>
+              <line x1="90" y1="30.0" x2="930" y2="30.0"></line>
+              <line x1="90" y1="100.0" x2="930" y2="100.0"></line>
+              <line x1="90" y1="170.0" x2="930" y2="170.0"></line>
+              <line x1="90" y1="240.0" x2="930" y2="240.0"></line>
+              <line x1="90" y1="310.0" x2="930" y2="310.0"></line>
             </g>
-            <polygon points="90,72.9 300,107.0 510,119.3 720,156.6 930,308.0 930,335.1 720,282.6 510,166.8 300,138.5 90,115.2" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></polygon>
+            <polygon points="90,104.6 300,83.2 510,168.6 720,219.4 930,229.1 930,309.6 720,262.1 510,220.1 300,257.9 90,145.1" style="fill:color-mix(in srgb,var(--color-accent) 22%,transparent);"></polygon>
             <g style="stroke:color-mix(in srgb,var(--color-text) 38%,transparent);stroke-width:1.25;">
               <line x1="90" y1="30" x2="90" y2="380"></line>
               <line x1="930" y1="30" x2="930" y2="380"></line>
@@ -870,13 +869,12 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
               <line x1="930" y1="380" x2="930" y2="387"></line>
             </g>
             <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="end">
-              <text x="79" y="385">200</text>
-              <text x="79" y="326.7">220</text>
-              <text x="79" y="268.3">240</text>
-              <text x="79" y="210">260</text>
-              <text x="79" y="151.7">280</text>
-              <text x="79" y="93.3">300</text>
-              <text x="79" y="35">320</text>
+              <text x="79" y="385.0">280</text>
+              <text x="79" y="315.0">300</text>
+              <text x="79" y="245.0">320</text>
+              <text x="79" y="175.0">340</text>
+              <text x="79" y="105.0">360</text>
+              <text x="79" y="35.0">380</text>
             </g>
             <g style="fill:color-mix(in srgb,var(--color-text) 66%,transparent);font-size:14.5px;" text-anchor="middle">
               <text x="90" y="405">8</text>
@@ -887,13 +885,13 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
             </g>
             <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Pixel bit depth (bits)</text>
             <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Maximum frequency (MHz)</text>
-            <polyline points="90,72.9 300,138.5 510,166.8 720,211.4 930,335.1" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
-            <polyline points="90,72.9 300,107.0 510,119.3 720,156.6 930,308.0" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
+            <polyline points="90,145.1 300,145.1 510,168.6 720,235.4 930,237.6" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
+            <polyline points="90,104.6 300,83.2 510,168.6 720,219.4 930,229.1" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
             <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 50%,transparent);stroke-width:1.75;">
-              <circle cx="90" cy="72.9" r="4"></circle><circle cx="300" cy="138.5" r="4"></circle><circle cx="510" cy="166.8" r="4"></circle><circle cx="720" cy="211.4" r="4"></circle><circle cx="930" cy="335.1" r="4"></circle>
+              <circle cx="90" cy="145.1" r="4"></circle><circle cx="300" cy="145.1" r="4"></circle><circle cx="510" cy="168.6" r="4"></circle><circle cx="720" cy="235.4" r="4"></circle><circle cx="930" cy="237.6" r="4"></circle>
             </g>
             <g style="fill:var(--color-accent-700);">
-              <circle cx="90" cy="72.9" r="5"></circle><circle cx="300" cy="107.0" r="5"></circle><circle cx="510" cy="119.3" r="5"></circle><circle cx="720" cy="156.6" r="5"></circle><circle cx="930" cy="308.0" r="5"></circle>
+              <circle cx="90" cy="104.6" r="5"></circle><circle cx="300" cy="83.2" r="5"></circle><circle cx="510" cy="168.6" r="5"></circle><circle cx="720" cy="219.4" r="5"></circle><circle cx="930" cy="229.1" r="5"></circle>
             </g>
             <g style="font-size:15px;">
               <line x1="112" y1="286" x2="150" y2="286" style="stroke:var(--color-accent-700);stroke-width:2.5;"></line>
@@ -956,14 +954,14 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
             <text x="510" y="437" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Pixel bit depth (bits)</text>
             <text transform="translate(24 205) rotate(-90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Logic (LUT / FF)</text>
             <text transform="translate(986 205) rotate(90)" text-anchor="middle" style="fill:color-mix(in srgb,var(--color-text) 82%,transparent);font-size:16px;letter-spacing:0.01em;font-weight:500;">Block RAM (tiles)</text>
-            <polyline points="90,147.3 300,121.5 510,103.2 720,80.5 930,47.5" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></polyline>
-            <polyline points="90,302.5 300,296.8 510,291.1 720,285.8 930,279.9" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
+            <polyline points="90,143.4 300,121.3 510,103.5 720,85.1 930,43.1" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 80%,transparent);stroke-width:2;"></polyline>
+            <polyline points="90,295.8 300,290.1 510,284.7 720,279.1 930,273.1" style="fill:none;stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:2;stroke-dasharray:7 5;"></polyline>
             <polyline points="90,277.9 300,263.3 510,219.6 720,190.4 930,161.2" style="fill:none;stroke:var(--color-accent-700);stroke-width:2.5;"></polyline>
             <g style="fill:color-mix(in srgb,var(--color-text) 80%,transparent);">
-              <rect x="86" y="143.3" width="8" height="8"></rect><rect x="296" y="117.5" width="8" height="8"></rect><rect x="506" y="99.2" width="8" height="8"></rect><rect x="716" y="76.5" width="8" height="8"></rect><rect x="926" y="43.5" width="8" height="8"></rect>
+              <rect x="86" y="139.4" width="8" height="8"></rect><rect x="296" y="117.3" width="8" height="8"></rect><rect x="506" y="99.5" width="8" height="8"></rect><rect x="716" y="81.1" width="8" height="8"></rect><rect x="926" y="39.1" width="8" height="8"></rect>
             </g>
             <g style="fill:var(--color-bg);stroke:color-mix(in srgb,var(--color-text) 42%,transparent);stroke-width:1.75;">
-              <circle cx="90" cy="302.5" r="4"></circle><circle cx="300" cy="296.8" r="4"></circle><circle cx="510" cy="291.1" r="4"></circle><circle cx="720" cy="285.8" r="4"></circle><circle cx="930" cy="279.9" r="4"></circle>
+              <circle cx="90" cy="295.8" r="4"></circle><circle cx="300" cy="290.1" r="4"></circle><circle cx="510" cy="284.7" r="4"></circle><circle cx="720" cy="279.1" r="4"></circle><circle cx="930" cy="273.1" r="4"></circle>
             </g>
             <g style="fill:var(--color-accent-700);">
               <circle cx="90" cy="277.9" r="5"></circle><circle cx="300" cy="263.3" r="5"></circle><circle cx="510" cy="219.6" r="5"></circle><circle cx="720" cy="190.4" r="5"></circle><circle cx="930" cy="161.2" r="5"></circle>
@@ -997,11 +995,11 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
         <p style="font-size:16px;line-height:1.64;margin:0;">Verified at three levels. In simulation, a layered suite — constrained-random self-checking tests, functional coverage, code coverage, and byte-exact comparison against CharLS, an independent open-source implementation of JPEG-LS — runs at both RTL and post-synthesis gate level. The same corpus is then re-encoded on a real device: the core runs on a PYNQ-Z2 and the returned bitstreams are compared byte-for-byte against the same reference.</p>
         <div style="display:flex;flex-direction:column;gap:26px;">
         <div style="display:flex;flex-direction:column;gap:0;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">5555/5555 byte-exact images</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Post-synthesis OSVVM</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">133,862 affirmations</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">11555/11555 byte-exact images</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Post-synthesis OSVVM</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">153,946 affirmations</span></div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Post-synthesis golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">167/167 byte-exact images</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">HIL golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">5639/5639 byte-exact on PYNQ-Z2</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">115 tests, 7,699,071 affirmations</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">HIL golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">11639/11639 byte-exact on PYNQ-Z2</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">126 tests, 8,948,681 affirmations</span></div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Code coverage</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">99.8% statements</span></div>
         </div>
         <a href="https://isentropic-fpga.github.io/OpenJLS/" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">Live verification report →</a>
