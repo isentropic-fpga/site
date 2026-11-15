@@ -408,7 +408,8 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 .cta{color:var(--color-accent-700);text-decoration:none;font-family:var(--font-heading);font-weight:var(--font-heading-weight);border-bottom:1px solid color-mix(in srgb,var(--color-accent) 45%,transparent);padding-bottom:2px;transition:border-color .18s;}
 .cta:hover{border-color:var(--color-accent);}
 .hero-h{font-family:var(--font-heading);font-weight:var(--font-heading-weight);font-size:clamp(44px,6.6vw,76px);line-height:1.04;}
-.sec-num{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600;font-feature-settings:'tnum' 1;}
+.sec-head{font-size:clamp(26px,3.2vw,36px);margin:0;display:flex;align-items:baseline;gap:16px;color:var(--color-accent-700);}
+.sec-no{color:color-mix(in srgb,var(--color-accent-700) 45%,transparent);font-feature-settings:'tnum' 1;}
 .kicker{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600;}
 .wrap{max-width:940px;margin:0 auto;}
 
@@ -474,6 +475,13 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 .chart-scroll > svg{min-width:620px;}
 .plate-fig > .plate-cap{order:-1;}
 .plate-cap{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 66%,transparent);font-weight:600;}
+.chart-cap{font-size:18px;letter-spacing:0;text-transform:none;color:var(--color-text);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
+.fig-no{color:color-mix(in srgb,var(--color-accent-700) 70%,transparent);font-feature-settings:'tnum' 1;}
+.sweep-head{display:flex;flex-direction:column;gap:10px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:30px;margin-top:20px;}
+.sweep-title{font-size:22px;margin:0;display:flex;align-items:baseline;gap:12px;}
+.num-title{display:flex;align-items:baseline;gap:0.45em;}
+.sweep-num{color:color-mix(in srgb,var(--color-accent-700) 70%,transparent);font-feature-settings:'tnum' 1;}
+.sweep-lead{font-size:16.5px;line-height:1.62;margin:0;max-width:74ch;color:color-mix(in srgb,var(--color-text) 78%,transparent);}
 
 /* ---- layout primitives (in CSS so they can collapse responsively) ---- */
 .g-2{display:grid;grid-template-columns:1fr 1fr;}
@@ -562,6 +570,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <nav class="site-nav" style="padding:14px var(--edge);position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 88%,transparent);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid color-mix(in srgb,var(--color-text) 7%,transparent);">
     <a href="/" aria-label="Isentropic — home" style="margin-right:auto;display:flex;align-items:center;"><img class="wm-light" src="assets/isentropic-wordmark.svg" alt="" style="height:42px;"><img class="wm-dark" src="assets/isentropic-wordmark-dark.svg" alt="" style="height:42px;"></a>
     <div class="nav-links">
+      <a href="/" class="nlink">Home</a>
       <a href="/products" class="nlink" data-active="">Products</a>
       <a href="/services" class="nlink">Services</a>
       <a href="/contact" class="nlink">Contact</a>
@@ -583,7 +592,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <section style="padding:0 var(--edge) 110px;">
     <div style="max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:36px;">
       <div style="display:flex;align-items:center;gap:16px;">
-        <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600;font-feature-settings:'tnum' 1;">01 · IP core</span>
+        <h2 class="sec-head"><span class="sec-no">1</span>IP core</h2>
         <hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;">
       </div>
       <div class="blueprint" style="background:var(--color-surface);">
@@ -630,7 +639,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
   <section style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:96px var(--edge);">
     <div style="max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:36px;">
       <div style="display:flex;align-items:center;gap:16px;">
-        <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-700);font-weight:600;font-feature-settings:'tnum' 1;">02 · Custom IP</span>
+        <h2 class="sec-head"><span class="sec-no">2</span>Custom IP</h2>
         <hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;">
       </div>
       <div class="g-split" style="align-items:center;gap:clamp(32px,5vw,72px);">

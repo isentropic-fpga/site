@@ -40,6 +40,7 @@
   <nav class="site-nav" style="padding:14px var(--edge);position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 88%,transparent);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid color-mix(in srgb,var(--color-text) 7%,transparent);">
     <a href="Home.dc.html" aria-label="Isentropic — home" style="margin-right:auto;display:flex;align-items:center;"><img class="wm-light" src="out/isentropic-wordmark.svg" alt="" style="height:42px;"><img class="wm-dark" src="out/isentropic-wordmark-dark.svg" alt="" style="height:42px;"></a>
     <div class="nav-links">
+      <a href="Home.dc.html" class="nlink">Home</a>
       <a href="Products.dc.html" class="nlink" data-active="">Products</a>
       <a href="Projects.dc.html" class="nlink">Services</a>
       <a href="Contact.dc.html" class="nlink">Contact</a>
@@ -100,7 +101,7 @@
   <!-- SPECIFICATIONS -->
   <section style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:88px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:38px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">01 · Specifications</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-head"><span class="sec-no">1</span>Specifications</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <table class="spec-tbl" style="max-width:680px;">
         <tbody>
           <tr><td>Standard</td><td>JPEG-LS (ISO/IEC 14495-1, ITU-T T.87)</td></tr>
@@ -125,32 +126,27 @@
   <!-- ARCHITECTURE -->
   <section style="padding:96px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">02 · Architecture</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-head"><span class="sec-no">2</span>Architecture</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <p style="font-size:17px;line-height:1.65;margin:0;max-width:62ch;">OpenJLS follows the JPEG-LS encoding pipeline, implemented as a fully pipelined, vendor-agnostic VHDL core.</p>
       <div class="g-5" style="gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);">
         <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">01</span>
-          <h3 style="font-size:16px;margin:0;">Gradient computation</h3>
+          <h3 class="num-title" style="font-size:16px;margin:0;"><span class="sweep-num">1</span>Gradient computation</h3>
           <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Local gradients from the causal neighbors a, b, c, d.</p>
         </div>
         <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">02</span>
-          <h3 style="font-size:16px;margin:0;">Context modeling</h3>
+          <h3 class="num-title" style="font-size:16px;margin:0;"><span class="sweep-num">2</span>Context modeling</h3>
           <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Gradient quantization into 365 contexts.</p>
         </div>
         <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">03</span>
-          <h3 style="font-size:16px;margin:0;">Prediction</h3>
+          <h3 class="num-title" style="font-size:16px;margin:0;"><span class="sweep-num">3</span>Prediction</h3>
           <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">MED predictor with per-context bias correction.</p>
         </div>
         <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">04</span>
-          <h3 style="font-size:16px;margin:0;">Encoding</h3>
+          <h3 class="num-title" style="font-size:16px;margin:0;"><span class="sweep-num">4</span>Encoding</h3>
           <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Adaptive Golomb-Rice, run-length for uniform regions.</p>
         </div>
         <div style="background:var(--color-bg);padding:26px 22px;display:flex;flex-direction:column;gap:10px;">
-          <span style="font-size:13px;font-weight:600;color:var(--color-accent-700);font-feature-settings:'tnum' 1;">05</span>
-          <h3 style="font-size:16px;margin:0;">Bitstream packing</h3>
+          <h3 class="num-title" style="font-size:16px;margin:0;"><span class="sweep-num">5</span>Bitstream packing</h3>
           <p style="font-size:13.5px;line-height:1.55;margin:0;color:color-mix(in srgb,var(--color-text) 68%,transparent);">Bit packing, byte stuffing and framing into an ISO/IEC 14495-1 stream.</p>
         </div>
       </div>
@@ -160,8 +156,7 @@
   <!-- RESOURCES & PERFORMANCE -->
   <section style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:88px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:44px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">03 · Resources &amp; performance</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
-      <p style="font-size:17px;line-height:1.65;margin:0;max-width:74ch;"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">MAX_IMAGE_WIDTH</span> sizes the line buffer, so only block RAM follows it; <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">BITNESS</span> widens the datapath.</p>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-head"><span class="sec-no">3</span>Resources &amp; performance</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:26px 40px;">
         <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid color-mix(in srgb,var(--color-text) 20%,transparent);padding-top:13px;">
           <span style="font-size:12.5px;letter-spacing:0.13em;text-transform:uppercase;color:color-mix(in srgb,var(--color-text) 58%,transparent);">Max frequency</span>
@@ -183,6 +178,11 @@
           <span style="font-size:17px;font-weight:600;font-feature-settings:'tnum' 1;">UltraScale+ ZU7EG</span>
         </div>
       </div>
+      <div class="sweep-head">
+        <h3 class="sweep-title"><span class="sweep-num">3.1</span>Image width sweep</h3>
+        <p class="sweep-lead"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">MAX_IMAGE_WIDTH</span> from 4k to 64k pixels, at 12-bit grayscale. It sizes the line buffer, so only block RAM follows it.</p>
+      </div>
+
       <figure class="plate-fig">
         <div class="blueprint" style="padding:26px 20px 14px;">
           <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
@@ -248,7 +248,7 @@
           </svg>
           </div>
         </div>
-        <figcaption class="plate-cap">Fig. 01 — Maximum frequency vs. maximum image width</figcaption>
+        <figcaption class="plate-cap chart-cap"><span class="fig-no">Fig. 1</span>Maximum frequency vs. maximum image width</figcaption>
       </figure>
 
       <figure class="plate-fig">
@@ -324,8 +324,13 @@
           </svg>
           </div>
         </div>
-        <figcaption class="plate-cap">Fig. 02 — Resource usage vs. maximum image width</figcaption>
+        <figcaption class="plate-cap chart-cap"><span class="fig-no">Fig. 2</span>Resource usage vs. maximum image width</figcaption>
       </figure>
+
+      <div class="sweep-head">
+        <h3 class="sweep-title"><span class="sweep-num">3.2</span>Pixel depth sweep</h3>
+        <p class="sweep-lead"><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.9em;letter-spacing:0.01em;">BITNESS</span> from 8 to 16 bits, at a maximum image width of 12,288. It widens the datapath.</p>
+      </div>
 
       <figure class="plate-fig">
         <div class="blueprint" style="padding:26px 20px 14px;">
@@ -392,7 +397,7 @@
           </svg>
           </div>
         </div>
-        <figcaption class="plate-cap">Fig. 03 — Maximum frequency vs. pixel bit depth</figcaption>
+        <figcaption class="plate-cap chart-cap"><span class="fig-no">Fig. 3</span>Maximum frequency vs. pixel bit depth</figcaption>
       </figure>
 
       <figure class="plate-fig">
@@ -466,28 +471,28 @@
           </svg>
           </div>
         </div>
-        <figcaption class="plate-cap">Fig. 04 — Resource usage vs. pixel bit depth</figcaption>
+        <figcaption class="plate-cap chart-cap"><span class="fig-no">Fig. 4</span>Resource usage vs. pixel bit depth</figcaption>
       </figure>
 
-      <p style="font-size:13.5px;line-height:1.62;margin:0;max-width:80ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);">Figs. 01–02 sweep image width at 12-bit grayscale; Figs. 03–04 sweep pixel bit depth at a maximum image width of 12,288. All characterized on an UltraScale+ <span style="font-feature-settings:'tnum' 1;">xczu7eg-fbvb900-1-e</span> (speed grade −1, slowest), Vivado 2025.2. Frequencies are true fmax — read by over-constraining the clock until the design failed timing. Resource figures use the default strategy; utilization is near-identical across strategies. RTL only, no floorplanning or vendor-specific optimization: representative, not guaranteed.</p>
+      <p style="font-size:13.5px;line-height:1.62;margin:0;max-width:80ch;color:color-mix(in srgb,var(--color-text) 66%,transparent);">All figures characterized on an UltraScale+ <span style="font-feature-settings:'tnum' 1;">xczu7eg-fbvb900-1-e</span> (speed grade −1, slowest), Vivado 2025.2. Frequencies are true fmax — read by over-constraining the clock until the design failed timing. Resource figures use the default strategy; utilization is near-identical across strategies. RTL only, no floorplanning or vendor-specific optimization: representative, not guaranteed.</p>
     </div>
   </section>
 
   <!-- VERIFICATION -->
   <section style="padding:96px var(--edge);">
     <div class="wrap" style="display:flex;flex-direction:column;gap:38px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">04 · Verification</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-head"><span class="sec-no">4</span>Verification</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <div class="g-2" style="gap:64px;align-items:start;">
         <p style="font-size:16px;line-height:1.64;margin:0;">Verified at three levels. In simulation, a layered suite — constrained-random self-checking tests, functional coverage, code coverage, and byte-exact comparison against CharLS, an independent open-source implementation of JPEG-LS — runs at both RTL and post-synthesis gate level. The same corpus is then re-encoded on a real device: the core runs on a PYNQ-Z2 and the returned bitstreams are compared byte-for-byte against the same reference. Formal proofs cover the control logic, the T.87 arithmetic and the bit/byte streams.</p>
         <div style="display:flex;flex-direction:column;gap:26px;">
         <div style="display:flex;flex-direction:column;gap:0;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Code coverage</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">99.7% statements</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">281 tests, 37,001,113 affirmations</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Formal</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">396/396 checks</span></div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">11575/11575 byte-exact images</span></div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Post-synthesis OSVVM</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">155,471 affirmations</span></div>
           <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Post-synthesis golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">169/169 byte-exact images</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">HIL golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">11659/11659 byte-exact on PYNQ-Z2</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">OSVVM suite</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">281 tests, 37,001,113 affirmations</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 9%,transparent);"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Formal</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">396/396 checks</span></div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">Code coverage</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">99.7% statements</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;"><span style="font-size:14px;color:color-mix(in srgb,var(--color-text) 64%,transparent);">HIL golden model</span><span style="font-size:15px;font-weight:600;font-feature-settings:'tnum' 1;text-align:right;">11659/11659 byte-exact on PYNQ-Z2</span></div>
         </div>
         <a href="https://isentropic-fpga.github.io/OpenJLS/" target="_blank" rel="noopener" class="cta" style="font-size:15px;align-self:flex-start;">Live verification report →</a>
         </div>
@@ -498,7 +503,7 @@
   <!-- LICENSING + LINKS -->
   <section style="padding:96px var(--edge) 40px;">
     <div class="wrap" style="display:flex;flex-direction:column;gap:40px;">
-      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-num" style="font-family:var(--font-body);margin:0;white-space:nowrap;">05 · Licensing</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
+      <div style="display:flex;align-items:center;gap:16px;"><h2 class="sec-head"><span class="sec-no">5</span>Licensing</h2><hr style="flex:1;height:1px;border:0;background:var(--color-divider);margin:0;"></div>
       <div class="g-2" style="gap:48px;">
         <div style="display:flex;flex-direction:column;gap:10px;">
           <h3 style="font-size:20px;margin:0;">GPL v3</h3>
