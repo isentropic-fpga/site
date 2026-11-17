@@ -18,7 +18,7 @@
        - <image-slot> plates baked to <img>, or dropped if no photo yet
        - theme.js inlined into <head> so the saved theme applies before paint
      assets/isentropic-wordmark.svg (+ -dark cut), assets/openjls-wordmark.svg (+ -dark cut),
-     assets/isentropic-icon-512.png
+     assets/isentropic-icon-512.png, assets/isentropic-icon-round-dark-512.png (favicon)
      assets/og-card.png, assets/og-openjls.png (referenced by og:image)
      robots.txt, sitemap.xml
    DEPLOY: upload the CONTENTS of export/ to the web root.
@@ -145,6 +145,7 @@ await saveFile('export/assets/isentropic-wordmark-dark.svg', await readFile('out
 await saveFile('export/assets/openjls-wordmark.svg', await readFile('out/openjls-wordmark.svg'));
 await saveFile('export/assets/openjls-wordmark-dark.svg', await readFile('out/openjls-wordmark-dark.svg'));
 await saveFile('export/assets/isentropic-icon-512.png', await readFileBinary('out/isentropic-icon-512.png'));
+await saveFile('export/assets/isentropic-icon-round-dark-512.png', await readFileBinary('out/isentropic-icon-round-dark-512.png'));
 await saveFile('export/assets/bench-host.jpg', await readFileBinary('out/bench-host.jpg'));
 await saveFile('export/assets/bench-pynq.jpg', await readFileBinary('out/bench-pynq.jpg'));
 /* The og:image / twitter:image URLs point at these absolutely, so a clean
