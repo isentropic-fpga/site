@@ -303,25 +303,25 @@ textarea.input { min-height: 90px; resize: vertical; }
 /* Warm retune of the Industry palette.
    Industry's structure, type and components are untouched — only the color
    tokens are re-pointed, which is how the system says to change its look.
-   Steel #5980a6 on cool grey becomes amber on neutral grey; the ramps keep
+   Steel #5980a6 on cool grey becomes cyan on neutral grey; the ramps keep
    Industry's perceptual lightness steps so every component still resolves.
-   Note: amber is a light accent, so the solid primary button carries a
-   near-black label (5.46:1) rather than a white one (3.3:1 — fails AA).
+   Note: cyan is a light accent, so the solid primary button carries a
+   near-black label (5.97:1) rather than a white one (2.6:1 — fails AA).
    The light ground is #e0e0e0, a step darker than the paper it replaced, so
-   accent-700 (link text) is darkened to #914f08 to hold 4.78:1 against it. */
+   accent-700 (link text) is darkened to #0a5f73 to hold 5.49:1 against it. */
 :root{
   --color-bg:#e0e0e0; --color-surface:#d5d5d5; --color-text:#1c1a16;
   --color-divider:color-mix(in srgb,#1c1a16 16%,transparent);
 
-  --color-accent:#d97706;
-  --color-accent-100:#faf1e3; --color-accent-200:#f5dcb9; --color-accent-300:#edc187;
-  --color-accent-400:#e5a04a; --color-accent-500:#d97706; --color-accent-600:#bd6706;
-  --color-accent-700:#914f08; --color-accent-800:#6f3d0c; --color-accent-900:#48290c;
+  --color-accent:#0ea5c6;
+  --color-accent-100:#e2f5f9; --color-accent-200:#b7e6f0; --color-accent-300:#7fd2e5;
+  --color-accent-400:#3fbcd8; --color-accent-500:#0ea5c6; --color-accent-600:#0b8aa6;
+  --color-accent-700:#0a5f73; --color-accent-800:#0a4a5a; --color-accent-900:#08323d;
 
-  --color-accent-2:#d97706;
-  --color-accent-2-100:#faf1e3; --color-accent-2-200:#f5dcb9; --color-accent-2-300:#edc187;
-  --color-accent-2-400:#e5a04a; --color-accent-2-500:#d97706; --color-accent-2-600:#bd6706;
-  --color-accent-2-700:#9a5408; --color-accent-2-800:#6f3d0c; --color-accent-2-900:#48290c;
+  --color-accent-2:#0ea5c6;
+  --color-accent-2-100:#e2f5f9; --color-accent-2-200:#b7e6f0; --color-accent-2-300:#7fd2e5;
+  --color-accent-2-400:#3fbcd8; --color-accent-2-500:#0ea5c6; --color-accent-2-600:#0b8aa6;
+  --color-accent-2-700:#0a5f73; --color-accent-2-800:#0a4a5a; --color-accent-2-900:#08323d;
 
   --color-neutral-100:#f4f0ea; --color-neutral-200:#e8e1d6; --color-neutral-300:#d7cdbe;
   --color-neutral-400:#bcaf9c; --color-neutral-500:#9d907c; --color-neutral-600:#7e7362;
@@ -353,28 +353,28 @@ html[data-theme="dark"]{color-scheme:dark;}
      100–300  tinted fills and hovers      -> deep, so they sit under the text
      400      button hover (lightens)      -> lighter than the base
      600      button pressed (deepens)     -> deeper than the base
-     700      accent text, links, tags     -> light amber, 8.9:1 on the ground
+     700      accent text, links, tags     -> light cyan, 11.2:1 on the ground
      800      link hover (lifts further)   -> lighter still
    The solid primary button keeps a near-black label in both themes. */
 html[data-theme="dark"]{
   --color-bg:#16130e; --color-surface:#1f1b14; --color-text:#e0e0e0;
   --color-divider:color-mix(in srgb,#e0e0e0 16%,transparent);
 
-  --color-accent:#e08b23;
-  --color-accent-100:#2a1c0b; --color-accent-200:#3d280d; --color-accent-300:#5c3d12;
-  --color-accent-400:#f0bd7c; --color-accent-500:#e08b23; --color-accent-600:#c07216;
-  --color-accent-700:#eeb367; --color-accent-800:#f5d1a3; --color-accent-900:#faead6;
+  --color-accent:#22b4d4;
+  --color-accent-100:#0a2128; --color-accent-200:#0c3039; --color-accent-300:#114554;
+  --color-accent-400:#6bcfe6; --color-accent-500:#22b4d4; --color-accent-600:#1595b2;
+  --color-accent-700:#7fd6ea; --color-accent-800:#b0e6f2; --color-accent-900:#daf3f9;
 
-  --color-accent-2:#e08b23;
-  --color-accent-2-100:#2a1c0b; --color-accent-2-200:#3d280d; --color-accent-2-300:#5c3d12;
-  --color-accent-2-400:#f0bd7c; --color-accent-2-500:#e08b23; --color-accent-2-600:#c07216;
-  --color-accent-2-700:#eeb367; --color-accent-2-800:#f5d1a3; --color-accent-2-900:#faead6;
+  --color-accent-2:#22b4d4;
+  --color-accent-2-100:#0a2128; --color-accent-2-200:#0c3039; --color-accent-2-300:#114554;
+  --color-accent-2-400:#6bcfe6; --color-accent-2-500:#22b4d4; --color-accent-2-600:#1595b2;
+  --color-accent-2-700:#7fd6ea; --color-accent-2-800:#b0e6f2; --color-accent-2-900:#daf3f9;
 
   --color-neutral-100:#1b1813; --color-neutral-200:#272319; --color-neutral-300:#3a3428;
   --color-neutral-400:#524a3a; --color-neutral-500:#7a7060; --color-neutral-600:#9d9382;
   --color-neutral-700:#bdb4a2; --color-neutral-800:#d9d1c2; --color-neutral-900:#efe9dd;
 }
-/* The amber fill is light in both themes, so its label stays near-black. */
+/* The cyan fill is light in both themes, so its label stays near-black. */
 html[data-theme="dark"] .btn-lg,
 html[data-theme="dark"] .btn-lg:hover,
 html[data-theme="dark"] .btn-lg:active,
@@ -433,16 +433,16 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 .dot:focus-visible{outline:2px solid var(--color-accent);outline-offset:0;}
 
 /* Same pairing problem as .btn-lg: Industry's .btn-primary is an accent fill
-   with a --color-bg label, which on the warm amber measures 2.80:1. The label
-   goes dark (5.45:1) and hover lightens rather than darkens, to suit it. */
+   with a --color-bg label, which on the cyan measures 2.20:1. The label
+   goes dark (5.97:1) and hover lightens rather than darkens, to suit it. */
 .btn-primary{color:var(--color-text);}
 .btn-primary:hover{background:var(--color-accent-400);border-color:var(--color-accent-400);color:var(--color-text);}
 .btn-primary:active{background:var(--color-accent-600);border-color:var(--color-accent-600);color:var(--color-text);}
 
 /* Industry's .tag-outline draws label and border in --color-accent. On the
-   warm ground that measures 2.80:1 — below AA for an 11px label and below the
+   ground that measures 2.20:1 — below AA for an 11px label and below the
    3:1 UI-boundary minimum. The system's own rule is that paragraph-size accent
-   text takes a deep ramp step, so tags use accent-700 (5.07:1). */
+   text takes a deep ramp step, so tags use accent-700 (5.49:1). */
 .tag-outline{color:var(--color-accent-700);border-color:var(--color-accent-700);}
 
 /* ---- tables ---- */
@@ -568,7 +568,7 @@ html[data-theme="dark"] .theme-btn .ico-moon{display:none;}
 <body>
 <div style="min-height:100%;display:flex;flex-direction:column;">
   <nav class="site-nav" style="padding:14px var(--edge);position:sticky;top:0;background:color-mix(in srgb,var(--color-bg) 88%,transparent);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid color-mix(in srgb,var(--color-text) 7%,transparent);">
-    <a href="/" aria-label="Isentropic — home" style="margin-right:auto;display:flex;align-items:center;"><img class="wm-light" src="assets/isentropic-wordmark.svg" alt="" style="height:42px;"><img class="wm-dark" src="assets/isentropic-wordmark-dark.svg" alt="" style="height:42px;"></a>
+    <a href="/" aria-label="Isentropic — home" style="margin-right:auto;display:flex;align-items:center;"><img class="wm-light" src="assets/isentropic-wordmark.svg" alt="" style="height:60px;position:relative;top:12px;"><img class="wm-dark" src="assets/isentropic-wordmark-dark.svg" alt="" style="height:60px;position:relative;top:12px;"></a>
     <div class="nav-links">
       <a href="/" class="nlink" data-active="">Home</a>
       <a href="/products" class="nlink">Products</a>
